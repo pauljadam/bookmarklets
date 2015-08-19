@@ -1,0 +1,1 @@
+alert('HTML Doc {' + document.title + '} has lang set {' + document.documentElement.lang + '}');
