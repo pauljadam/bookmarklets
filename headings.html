@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<title>PaulJAdam's Show Headings Bookmarklet</title>
+<meta charset="UTF-8">
+<title>Headings Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
-
-<h1>This is a heading.</h1>
+<p>Headings Bookmarklet for Accessibility Testing inserts a black on yellow opening and closing tag into the DOM around each H1-H6 and WAI-ARIA role=heading aria-level=1-6</p>
+<p><a href="http://pauljadam.com/bookmarklets/headings.html">http://pauljadam.com/bookmarklets/headings.html</a></p>
+<h1>This is a heading level 1.</h1>
 <p>This is another paragraph.</p>
-<h2>This is a heading.</h2>
+<h2>This is a heading level 2.</h2>
 <p>This is another paragraph.</p>
-<h3>This is a heading.</h3>
+<h3>This is a heading level 3.</h3>
 <p>This is another paragraph.</p>
-<h4>This is a heading.</h4>
+<h4>This is a heading level 4.</h4>
 <p>This is another paragraph.</p>
-<h5>This is a heading.</h5>
+<h5>This is a heading level 5.</h5>
 <p>This is another paragraph.</p>
-<h6>This is a heading.</h6>
+<h6>This is a heading level 6.</h6>
 <p>This is another paragraph.</p>
 <b role="heading" aria-level="1">This is a role=heading aria-level=1.</b>
 <p>This is another paragraph.</p>
@@ -43,7 +46,7 @@ function loadJS(file) {
 }
 </script>
 <button onclick="loadJS('headings.js');">Show Headings</button>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a></p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
 
 </body>
 </html>

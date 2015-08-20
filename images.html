@@ -1,0 +1,31 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Images Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p>Images Bookmarklet for Accessibility Testing inserts a green border around images that have alt values and a red border around images with no alt attribute. Alt attribute vaules are displayed in black on yellow text on top of the images. Imags with empty alt values, &lt;img alt=&quot;&quot;&gt; are shown as alt="".</p>
+<p><a href="http://pauljadam.com/bookmarklets/images.html">http://pauljadam.com/bookmarklets/images.html</a></p>
+<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt=""></p>
+<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></p>
+<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="Deque U Best Practice"></p>
+  <script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+
+<button onclick="loadJS('images.js');">Show Images Alt</button>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';})();">Images Bookmarklet</a> (drag link to bookmarks bar)</p>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan");
+        $("fieldset").attr('style','border:2px solid green;');
 		$("input").each(function() {
 				$(this).attr('style','border:green 2px solid;padding:2px;');
    			 	$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;input id="+$(this).attr('id')+"&gt;</span>");
@@ -23,7 +24,10 @@ javascript: (function() {
         $("legend").each(function() {
                	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;legend&gt;</span>");
                 $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/legend&gt;</span>");
-
+        });
+        $("fieldset").each(function() {
+               	$(this).before("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;fieldset&gt;</span>");
+                $(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/fieldset&gt;</span>");
         });
         }
         l()
