@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PaulJAdam's Show Headings Bookmarklet</title>
+</head>
+<body>
+
+<h1>This is a heading.</h1>
+<p>This is another paragraph.</p>
+<h2>This is a heading.</h2>
+<p>This is another paragraph.</p>
+<h3>This is a heading.</h3>
+<p>This is another paragraph.</p>
+<h4>This is a heading.</h4>
+<p>This is another paragraph.</p>
+<h5>This is a heading.</h5>
+<p>This is another paragraph.</p>
+<h6>This is a heading.</h6>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="1">This is a role=heading aria-level=1.</b>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="2">This is a role=heading aria-level=2.</b>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="3">This is a role=heading aria-level=3.</b>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="4">This is a role=heading aria-level=4.</b>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="5">This is a role=heading aria-level=5.</b>
+<p>This is another paragraph.</p>
+<b role="heading" aria-level="6">This is a role=heading aria-level=6.</b>
+<p>This is another paragraph.</p>
+
+<script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+</script>
+<button onclick="loadJS('headings.js');">Show Headings</button>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a></p>
+
+</body>
+</html>
