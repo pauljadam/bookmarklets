@@ -1,0 +1,143 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Forms Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p>Bookmarklets for Accessibility Testing: <a href="headings.html">Headings</a>, <a href="images.html">Images</a>, <a href="forms.html">Forms</a>, (more soon)</p>
+<p>Forms Bookmarklet for Accessibility Testing inserts a green border around images that have alt values and a red border around images with no alt attribute. Alt attribute vaules are displayed in black on yellow text on top of the images. Imags with empty alt values, &lt;img alt=&quot;&quot;&gt; are shown as alt="".</p>
+<h2>Form Controls</h2>
+<form name="form1" method="post" action="">
+  <p>
+    <label>Wrapped (Implicit)
+      <input type="text" name="wrapped" id="wrapped">
+    </label>
+  </p>
+  <p>
+    <label for="For/ID">For/ID (Explicit)</label>
+    <input type="text" name="For/ID" id="For/ID">
+  </p>
+  <p>
+    <label for="textarea">textarea (explicit)</label>
+    <textarea name="textarea" id="textarea"></textarea>
+  </p>
+  <p>
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox">checkbox (explicit)</label>
+  </p>
+  <fieldset>
+    <legend>Fieldset/Legend Construct</legend>
+    <p>
+      <label>
+        <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_0">
+        Checkbox 1.0</label>
+      <br>
+      <label>
+        <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_1">
+        Checkbox 1.1</label>
+    </p>
+  </fieldset>
+  <fieldset>
+    <legend>radio group fieldset/legend</legend>
+    <p>
+      <label>
+        <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0">
+        Radio 1.0</label>
+      <br>
+      <label>
+        <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1">
+        Radio 1.1</label>
+      <br>
+    </p>
+  </fieldset>
+  <p>
+    <label for="selectmenu">select menu (explicit)</label>
+    <select name="selectmenu" id="selectmenu">
+      <option>item1</option>
+      <option>item2</option>
+      <option>item3</option>
+      <option>item4</option>
+    </select>
+    <input type="button" name="go_button" id="go_button" value="Go">
+  </p>
+  <p>
+      <label for="optgroup">select with optgroup</label>
+      <select name="tshirt" id="optgroup">
+        <option value="" selected="">Select a Women's or Men's Size:</option>
+        <optgroup label="Women's Sizes">
+        <option value="wxsmall">Extra Small</option>
+        <option value="wsmall">Small</option>
+        <option value="wmedium">Medium</option>
+        <option value="wlarge">Large</option>
+        </optgroup>
+        <optgroup label="Men's Sizes">
+        <option value="mmedium">Medium</option>
+        <option value="mlarge">Large</option>
+        <option value="mxlarge">Extra Large</option>
+        <option value="mxxlarge">Extra Extra Large</option>
+        </optgroup>
+      </select>
+    </p>
+  <p>non-label text
+    placed to above input<br>
+    <input>
+  </p>
+  <p>non-label text
+    placed to left of input
+    <input>
+  </p>
+  <p>
+    <input>
+    non-label text
+  placed to right of input</p>
+  <p>
+    <input title="Title Attribute">
+  </p>
+  <p>
+    <input aria-label="aria-label attribute">
+  </p>
+  <p>
+    <label><input type="radio" name="RadioGroup3" value="radio1" id="RadioGroup3_0"><a href="http://www.google.com">Radio Link 1</a> wrapped label</label>
+      <br>
+     <input type="radio" name="RadioGroup3" value="radio2" id="RadioGroup3_1" aria-labelledby="radio-aria-label"><span id="radio-aria-label"><a href="http://www.google.com">Radio Link 2</a> no label just aria</span>
+   </p>
+  <p><input type="checkbox" id="foo1"> <label for="foo1">I have read and understand the <a href="http://www.google.com">Terms of Service</a></label></p>
+  <input type="reset" value="Reset">
+  <input type="submit" name="button" id="button" value="Submit">
+</form>
+<h3>Outside Form Element</h3>
+<p>
+  <label>
+    <input type="checkbox" name="outside-checkbox" id="outside-checkbox">
+    Outside Checkbox Wrapped</label>
+</p>
+<p>
+  <label>
+    <input type="radio" name="RadioGroup2" value="radio" id="RadioGroup2_0">
+    Outside Radio 1</label>
+  <br>
+  <label>
+    <input type="radio" name="RadioGroup2" value="radio" id="RadioGroup2_1">
+    Outside Radio 2</label>
+  <br>
+</p>
+<script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+
+<button onclick="loadJS('forms.js');">Show Forms Info</button>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';})();">Forms Bookmarklet</a> (drag link to bookmarks bar)</p>
+
+</body>
+</html>

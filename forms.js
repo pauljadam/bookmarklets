@@ -3,20 +3,23 @@ javascript: (function() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan");
         $("fieldset").attr('style','border:2px solid green;');
-		$("input").each(function() {
-				$(this).attr('style','border:green 2px solid;padding:2px;');
-   			 	$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;input id="+$(this).attr('id')+"&gt;</span>");
+		var inputs = $('input, textarea, select').not(':input[type=button], :input[type=submit], :input[type=reset]');
+		$(inputs).each(function() {
+			$(this).attr('style','border:green 2px solid;padding:2px;');
             var label = $('label[for="'+$(this).attr('id')+'"]');
             if(label.length <= 0) {
                 var parentElem = $(this).parent(),
                     parentTagName = parentElem.get(0).tagName.toLowerCase();
-
                 if(parentTagName == "label") {
                     label = parentElem;
                 }
-            $(this).attr('style','border:red 2px solid;padding:2px;');
-
             }
+			if(!$(this).attr('id')) {
+				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">NO ID</span>");
+            	$(this).attr('style','border:red 2px solid;padding:2px;');
+			} else {
+				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;input id="+$(this).attr('id')+"&gt;</span>");
+			}
             console.log('label.text(); = '+label.text());
             $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;label for="+$(this).attr('id')+"&gt;</span>");
             $(label).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/label&gt;</span>");
