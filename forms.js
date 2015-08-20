@@ -3,7 +3,7 @@ javascript: (function() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan");
         $("fieldset").attr('style','border:2px solid green;');
-		var inputs = $('input, textarea, select').not(':input[type=button], :input[type=submit], :input[type=reset]');
+		var inputs = $('input, textarea, select').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
 		$(inputs).each(function() {
 			$(this).attr('style','border:green 2px solid;padding:2px;');
             var label = $('label[for="'+$(this).attr('id')+'"]');
