@@ -2,6 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".altSpan");
+		$('#success').remove();
 		$("img").each(function() {
 			if (!this.hasAttribute('alt')) {
 				$(this).attr('style','border:red 2px solid;padding:2px;');
