@@ -31,7 +31,7 @@ javascript: (function() {
 			alert('No Headings Level 1-6 or WAI-ARIA role=heading Elements Found!');
 			} else {
 				console.log('headings found');
-				$('body').append('<div id="success" role="alert"></div>');
+				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Headings Found!');
 			}
         }
