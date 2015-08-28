@@ -32,7 +32,7 @@ javascript: (function() {
 			} else {
 				console.log('headings found');
 				$('body').append('<div id="success" role="alert"></div>');
-				$('#success').html('Headings Found!');
+				$('#success').html('Success! Headings Found!');
 			}
         }
         l()
