@@ -29,7 +29,7 @@ javascript: (function() {
 			if (!$('h1').length && !$('h2').length && !$('h3').length && !$('h4').length && !$('h5').length && !$('h6').length) {
 			alert('No Headings Level 1-6 Found!');
 			} else {
-				console.log('headings found')
+				console.log('headings found');
 			}
         }
         l()
