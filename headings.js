@@ -2,6 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("strong").remove(".openSpan, .closeSpan");
+		$('#success').remove();
         $("h1").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;h1&gt;</strong>");
         $("h1").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;/h1&gt;</strong>");
         $("h2").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;h2&gt;</strong>");
@@ -30,6 +31,8 @@ javascript: (function() {
 			alert('No Headings Level 1-6 Found!');
 			} else {
 				console.log('headings found');
+				$('body').append('<div id="success" role="alert"></div>');
+				$('#success').html('Headings Found!');
 			}
         }
         l()
