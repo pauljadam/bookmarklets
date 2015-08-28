@@ -26,6 +26,9 @@ javascript: (function() {
         $("[role=heading][aria-level=5]").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;/[role=heading][aria-level=5]&gt;</strong>");
         $("[role=heading][aria-level=6]").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;[role=heading][aria-level=6]&gt;</strong>");
         $("[role=heading][aria-level=6]").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow\">&lt;/[role=heading][aria-level=6]&gt;</strong>");
+			if (!$('h1').length && !$('h2').length && !$('h3').length && !$('h4').length && !$('h5').length && !$('h6').length) {
+			alert('No Headings Level 1-6 Found!');
+			}
         }
         l()
     }
