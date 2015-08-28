@@ -2,6 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan");
+		$('#success').remove();
         $("fieldset").attr('style','outline:2px solid green;');
         $("label").attr('style','outline:2px solid green;');
 		var inputs = $('input, textarea, select').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
@@ -19,20 +20,26 @@ javascript: (function() {
 				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:red 2px solid;background-color:yellow;z-index:2147483647;\">NO ID</span>");
             	$(this).attr('style','outline:red 2px solid;padding:2px;');
 			} else {
-				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:green 2px solid;background-color:yellow;z-index:2147483647;\">ID="+$(this).attr('id')+"</span>");
+				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:green 2px solid;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">ID="+$(this).attr('id')+"</span>");
 			}
             console.log('label.text(); = '+label.text());
-            $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;label for="+$(this).attr('id')+"&gt;</span>");
-            $(label).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/label&gt;</span>");
+            $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label for="+$(this).attr('id')+"&gt;</span>");
+            $(label).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
         });
         $("legend").each(function() {
-               	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;legend&gt;</span>");
-                $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/legend&gt;</span>");
+               	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;legend&gt;</span>");
+                $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/legend&gt;</span>");
         });
         $("fieldset").each(function() {
-               	$(this).before("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;\">&lt;fieldset&gt;</span>");
-                $(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow\">&lt;/fieldset&gt;</span>");
+               	$(this).before("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;fieldset&gt;</span>");
+                $(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/fieldset&gt;</span>");
         });
+			if (!$(inputs).length) {
+				alert('No Form Inputs Found!');
+			} else {
+				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
+				$('#success').html('Success! Form Inputs Found!');
+			}
         }
         l()
     }
