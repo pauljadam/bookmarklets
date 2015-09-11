@@ -9,22 +9,28 @@ javascript: (function() {
 		$(inputs).each(function() {
 			$(this).attr('style','outline:green 2px solid;padding:2px;');
             var label = $('label[for="'+$(this).attr('id')+'"]');
+			var wrappedLabel;
             if(label.length <= 0) {
+            	$(this).attr('style','outline:orange 2px dashed;padding:2px;');
                 var parentElem = $(this).parent(),
                     parentTagName = parentElem.get(0).tagName.toLowerCase();
                 if(parentTagName == "label") {
-                    label = parentElem;
+                    //label = parentElem;
+					wrappedLabel = parentElem;
                 }
             }
 			if(!$(this).attr('id')) {
-				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:red 2px solid;background-color:yellow;z-index:2147483647;\">NO ID</span>");
-            	$(this).attr('style','outline:red 2px solid;padding:2px;');
+				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:red 2px dotted;background-color:yellow;z-index:2147483647;\">&lt;input NO ID&gt;</span>");
+            	$(this).attr('style','outline:red 2px dotted;padding:2px;');
 			} else {
-				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:green 2px solid;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">ID="+$(this).attr('id')+"</span>");
+				$(this).before("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;outline:green 2px solid;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;input id=\""+$(this).attr('id')+"\"&gt;</span>");
 			}
-            console.log('label.text(); = '+label.text());
-            $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label for="+$(this).attr('id')+"&gt;</span>");
+            $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label for=\""+$(this).attr('id')+"\"&gt;</span>");
             $(label).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
+            $(wrappedLabel).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO FOR&gt;</span>");
+            $(wrappedLabel).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
+	        $(wrappedLabel).attr('style','outline:2px dashed orange;');
+
         });
         $("legend").each(function() {
                	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;legend&gt;</span>");
