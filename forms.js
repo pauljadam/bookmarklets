@@ -29,21 +29,25 @@ javascript: (function() {
             $(wrappedLabel).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO FOR&gt;</span>");
             $(wrappedLabel).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
 	        $(wrappedLabel).attr('style','outline:2px dashed orange;');
-
+			if($(this).attr('title')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;outline:dashed 2px orange;speak:literal-punctuation;\">title=\""+$(this).attr('title')+"\"</span>");
+			}
+			if($(this).attr('aria-label')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;outline:solid 2px green;speak:literal-punctuation;\">aria-label=\""+$(this).attr('aria-label')+"\"</span>");
+			}
         });
 		$('label').each(function(index) {
 			var forAttr = $(this).attr('for');
 			var idString = "#";
 			idString += forAttr;
-			console.log(idString);
 			if ($(idString).length <=0 && $(this).attr('for')) {
-				console.log($(this).html());
 				$(this).attr('style','outline:red 2px dotted;padding:2px;');
 				$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO ID MATCH&gt;</span>");
 				$(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
 			}
 		});
         $("legend").each(function() {
+				$(this).attr('style','outline:green 2px solid;padding:2px;');
                	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;legend&gt;</span>");
                 $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/legend&gt;</span>");
         });
