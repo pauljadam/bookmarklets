@@ -5,6 +5,21 @@ javascript: (function() {
 		$('#success').remove();
         $("fieldset").attr('style','outline:2px solid green;');
         $("label").attr('style','outline:2px solid green;');
+console.log("----------------------------------");
+$('label').each(function(index) {
+	var forAttr = $(this).attr('for');
+	var idString = "#";
+	idString += forAttr;
+    console.log(idString);
+	if ($(idString).length <=0) {
+		console.log($(this).html());
+		$(this).attr('style','outline:red 2px dotted;padding:2px;');
+		$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO ID MATCH&gt;</span>");
+		$(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
+
+	}
+});
+console.log("----------------------------------");
 		var inputs = $('input, textarea, select').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
 		$(inputs).each(function() {
 			$(this).attr('style','outline:green 2px solid;padding:2px;');
