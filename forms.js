@@ -36,7 +36,7 @@ javascript: (function() {
 			var idString = "#";
 			idString += forAttr;
 			console.log(idString);
-			if ($(idString).length <=0) {
+			if ($(idString).length <=0 && $(this).attr('for')) {
 				console.log($(this).html());
 				$(this).attr('style','outline:red 2px dotted;padding:2px;');
 				$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO ID MATCH&gt;</span>");
