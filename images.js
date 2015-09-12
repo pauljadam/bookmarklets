@@ -5,11 +5,14 @@ javascript: (function() {
 		$('#success').remove();
 		$("img").each(function() {
 			if (!this.hasAttribute('alt')) {
-				$(this).attr('style','border:red 2px dotted;padding:2px;');
-   			 	$(this).before("<span class=\"altSpan\" style=\"border:red 2px dotted;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;\">NO ALT</span>");
+				$(this).attr('style','border:red 2px solid;padding:2px;');
+   			 	$(this).before("<span class=\"altSpan\" style=\"border:red 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;\">NO ALT</span>");
 			} else {
-				$(this).attr('style','border:green 2px solid;padding:2px;');
-   			 	$(this).before("<span class=\"altSpan\" style=\"border:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;speak: literal-punctuation;\">alt=\""+$(this).attr('alt')+"\"</span>");
+				$(this).attr('style','border:green 2px dashed;padding:2px;');
+   			 	$(this).before("<span class=\"altSpan\" style=\"border:green 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;speak: literal-punctuation;\">alt=\""+$(this).attr('alt')+"\"</span>");
+			}
+			if ($(this).parent('a').length) {
+   			 	$(this).before("<span class=\"altSpan\" style=\"border:red 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;\">LINK NO ALT</span>");
 			}
 	    });
 			if (!$('img').length) {
