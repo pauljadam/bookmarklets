@@ -1,0 +1,1 @@
+alert(document.querySelector("meta[name=viewport]").getAttribute('content'));

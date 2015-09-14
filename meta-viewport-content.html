@@ -1,0 +1,45 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Meta Viewport Content Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p>Bookmarklets for Accessibility Testing: <a href="headings.html">Headings</a>, <a href="images.html">Images</a>, <a href="forms.html">Forms</a>, <a href="page-title-lang.html">Page Title + Language</a>, (more soon)</p>
+<p>Meta Viewport Content Bookmarklet for Accessibility Testing displays a JavaScript alert() dialog with the &lt;meta name=viewport&gt; content attribute so you can tell if pinch-to-zoom has been disabled. If user-scalable=0 then mobile users cannot increase the size of the web page with the standard pinch-to-zoom gesture. </p>
+<p><a href="http://pauljadam.com/bookmarklets/meta-viewport-content.html">http://pauljadam.com/bookmarklets/meta-viewport-content.html</a>
+  <script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+</p>
+<button onclick="loadJS('meta.js');">Show Meta Viewport Content</button>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';})();">Meta Viewport Content Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h3>Not so easy installation method:</h3>
+<ol>
+  <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
+  <li>Tap Select All.</li>
+  <li>Tap Copy.</li>
+  <li>Add this page as a bookmark to your mobile safari browser with the name you want to call this Bookmarklet.</li>
+  <li>Go to your bookmarks and naviate to the newly added bookmark.</li>
+  <li>Edit the bookmark you just created.</li>
+  <li>Delete the full http URL.</li>
+  <li>Paste the JavaScript Bookmarklet URL Code.</li>
+  <li>Save the updated bookmark.</li>
+  <li>Visit the page you want to test for accessibility problems.</li>
+  <li>Activate your newly created bookmarklet. </li>
+</ol>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';})();</textarea>
+</body>
+</html>
