@@ -1,20 +1,15 @@
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
-<title>Images Bookmarklet for Accessibility Testing</title>
+<title>Page Title + Language Bookmarklet for Accessibility Testing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
 <p>Bookmarklets for Accessibility Testing: <a href="headings.html">Headings</a>, <a href="images.html">Images</a>, <a href="forms.html">Forms</a>, <a href="page-title-lang.html">Page Title + Language</a>, (more soon)</p>
-<p>Images Bookmarklet for Accessibility Testing inserts a green dashed outline around images that have alt values and a red solid outline around images with no alt attribute. Alt attribute vaules are displayed in black on yellow text on top of the images. Images with empty alt values, &lt;img alt=&quot;&quot;&gt; are shown as alt="".</p>
-<p><a href="http://pauljadam.com/bookmarklets/images.html">http://pauljadam.com/bookmarklets/images.html</a></p>
-<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt=""></p>
-<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></p>
-<p><a href="http://www.dequeuniversity.com"><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></a></p>
-<p><a href="http://www.dequeuniversity.com"><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="Deque U Best Practice"></a></p>
-<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="Deque U Best Practice"></p>
-<script type="application/javascript">
+<p>Page Title + Language Bookmarklet for Accessibility Testing displays a JavaScript alert() dialog with the title of the document and the language if present. </p>
+<p><a href="http://pauljadam.com/bookmarklets/page-title-lang.html">http://pauljadam.com/bookmarklets/page-title-lang.html</a>
+  <script type="application/javascript">
 function loadJS(file) {
     // DOM: Create the script element
     var jsElm = document.createElement("script");
@@ -26,10 +21,10 @@ function loadJS(file) {
     document.body.appendChild(jsElm);
 }
   </script>
-
-<button onclick="loadJS('images.js');">Show Images Alt</button>
+</p>
+<button onclick="loadJS('lang.js');">Show Page Title + Language</button>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';})();">Images Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';})();">Page Title + Lang Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h3>Not so easy installation method:</h3>
 <ol>
   <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>

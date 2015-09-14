@@ -1,1 +1,1 @@
-alert('HTML Doc {' + document.title + '} has lang set {' + document.documentElement.lang + '}');
+alert('Page Titled: {' + document.title + '} Has Language Set: {' + document.documentElement.lang + '}');
