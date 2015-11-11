@@ -1,19 +1,20 @@
 javascript: (function() {
     function callback() {
         function l() {
-        $("span").remove(".tabindexSpan");
+        $("span").remove(".landmarksSpan");
+		var landmarks = $('[role=foo], [role=header], [role=contentinfo]')
 		$('#success').remove();
 		$("*").each(function() {
-			if (this.hasAttribute('tabindex')) {
+			if (this.hasAttribute('role')) {
 				$(this).attr('style','outline:orange 2px dashed;padding:2px;');
-   			 	$(this).after("<span class=\"tabindexSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">tabindex=\""+$(this).attr('tabindex')+"\"</span>");
+   			 	$(this).before("<span class=\"landmarksSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">role=\""+$(this).attr('role')+"\"</span>");
 				}
 	    });
-			if (!$('[tabindex]').length) {
-				alert('No <HTML> Elements with tabindex Found!');
+			if (!$(landmarks).length) {
+				alert('No Landmarks Found!');
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
-				$('#success').html('Success! tabindex Found!');
+				$('#success').html('Success! Landmarks Found!');
 			}
         }
         l()

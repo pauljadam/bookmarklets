@@ -1,22 +1,24 @@
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
-<title>Tabindex Bookmarklet for Accessibility Testing</title>
+<title>Landmarks Bookmarklet for Accessibility Testing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
-<h1>Tabindex Bookmarklet for Accessibility Testing </h1>
-<p><a href="http://pauljadam.com/bookmarklets/tabindex.html">http://pauljadam.com/bookmarklets/tabindex.html</a></p>
+<h1>Landmarks Bookmarklet for Accessibility Testing </h1>
+<p><a href="http://pauljadam.com/bookmarklets/landmarks.html">http://pauljadam.com/bookmarklets/landmarks.html</a></p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';})();" tabindex="5">Tabindex Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';})();">Landmarks Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
-<p><a href="http://PaulJAdam.com" tabindex="2">PaulJAdam.com</a></p>
-<p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="" tabindex="0"></p>
-<p><a href="http://www.deque.com" tabindex="0">Deque</a></p>
-<p><a href="http://google.com" tabindex="-1">Google</a></p>
-<p><span tabindex="0" aria-label="Close About Us Dialog">X</span></p>
+<main role="main">
+<div id="header" role="banner">A banner image and introductory title</div>
+<div id="sitelookup" role="search">....</div>
+<div id="nav" role="navigation">...a list of links here ... </div>
+<div id="content" role="main"> ... Ottawa is the capital of Canada ...</div>
+<div id="rightsideadvert" role="complementary">....an advertisement here...</div>
+<div id="footer" role="contentinfo">(c)The Freedom Company, 123 Freedom Way, Helpville, USA</div></main>
 <h2>Bookmarklet Demo</h2>
 <script type="application/javascript">
 function loadJS(file) {
@@ -31,7 +33,7 @@ function loadJS(file) {
 }
   </script>
 
-<button onclick="loadJS('tabindex.js');" tabindex="1">Show Tabindex</button>
+<button onclick="loadJS('landmarks.js');">Show Landmarks</button>
 <h3>Not so easy installation method:</h3>
 <ol>
   <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
@@ -47,6 +49,6 @@ function loadJS(file) {
   <li>Activate your newly created bookmarklet. </li>
 </ol>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40" tabindex="0">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';})();</textarea>
 </body>
 </html>
