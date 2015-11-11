@@ -2,13 +2,11 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".landmarksSpan");
-		var landmarks = $('[role=foo], [role=header], [role=contentinfo]')
+		var landmarks = $('[role=main], [role=search], [role=contentinfo], [role=banner], [role=navigation], [role=complementary], [role=application]')
 		$('#success').remove();
-		$("*").each(function() {
-			if (this.hasAttribute('role')) {
-				$(this).attr('style','outline:orange 2px dashed;padding:2px;');
-   			 	$(this).before("<span class=\"landmarksSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">role=\""+$(this).attr('role')+"\"</span>");
-				}
+		$(landmarks).each(function() {
+				$(this).attr('style','outline:green 1px solid;padding:2px;');
+   			 	$(this).before("<span class=\"landmarksSpan\" style=\"outline:green 1px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">role=\""+$(this).attr('role')+"\"</span>");
 	    });
 			if (!$(landmarks).length) {
 				alert('No Landmarks Found!');
