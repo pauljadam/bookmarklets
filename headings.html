@@ -6,9 +6,12 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
-<p>Bookmarklets for Accessibility Testing: <a href="headings.html">Headings</a>, <a href="images.html">Images</a>, <a href="forms.html">Forms</a>, <a href="page-title-lang.html">Page Title + Language</a>, <a href="meta-viewport-content.html">Meta Viewport Content</a>, (more soon)</p>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Headings Bookmarklet for Accessibility Testing </h1>
 <p>Headings Bookmarklet for Accessibility Testing inserts a black on yellow opening and closing tag into the DOM around each H1-H6 and WAI-ARIA role=heading aria-level=1-6</p>
-<p><a href="http://pauljadam.com/bookmarklets/headings.html">http://pauljadam.com/bookmarklets/headings.html</a></p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
 <h1>This is a heading level 1.</h1>
 <p>This is another paragraph.</p>
 <h2>This is a heading level 2.</h2>
@@ -33,6 +36,7 @@
 <p>This is another paragraph.</p>
 <b role="heading" aria-level="6">This is a role=heading aria-level=6.</b>
 <p>This is another paragraph.</p>
+<h2>Bookmarklet Demo</h2>
 
 <script type="application/javascript">
 function loadJS(file) {
@@ -47,8 +51,6 @@ function loadJS(file) {
 }
 </script>
 <button onclick="loadJS('headings.js');">Show Headings</button>
-<h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h3>Not so easy installation method:</h3>
 <ol>
   <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
