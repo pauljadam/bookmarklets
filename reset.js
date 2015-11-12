@@ -7,6 +7,8 @@ javascript: (function() {
 		$("*").each(function() {
 				$(this).css('outline','');
 	    	});
+		$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
+		$('#success').html('Success! Page Reset!');
         }
         l()
     }
