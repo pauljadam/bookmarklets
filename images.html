@@ -8,12 +8,15 @@
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
 <p>Images Bookmarklet for Accessibility Testing inserts a green dashed outline around images that have alt values and a red solid outline around images with no alt attribute. Alt attribute vaules are displayed in black on yellow text on top of the images. Images with empty alt values, &lt;img alt=&quot;&quot;&gt; are shown as alt="".</p>
-<p><a href="http://pauljadam.com/bookmarklets/images.html">http://pauljadam.com/bookmarklets/images.html</a></p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';})();">Images Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
 <p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt=""></p>
 <p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></p>
 <p><a href="http://www.dequeuniversity.com"><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></a></p>
 <p><a href="http://www.dequeuniversity.com"><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="Deque U Best Practice"></a></p>
 <p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="Deque U Best Practice"></p>
+<h2>Bookmarklet Demo</h2>
 <script type="application/javascript">
 function loadJS(file) {
     // DOM: Create the script element
@@ -28,22 +31,7 @@ function loadJS(file) {
   </script>
 
 <button onclick="loadJS('images.js');">Show Images Alt</button>
-<h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';})();">Images Bookmarklet</a> (drag link to bookmarks bar)</p>
-<h3>Not so easy installation method:</h3>
-<ol>
-  <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
-  <li>Tap Select All.</li>
-  <li>Tap Copy.</li>
-  <li>Add this page as a bookmark to your mobile safari browser with the name you want to call this Bookmarklet.</li>
-  <li>Go to your bookmarks and naviate to the newly added bookmark.</li>
-  <li>Edit the bookmark you just created.</li>
-  <li>Delete the full http URL.</li>
-  <li>Paste the JavaScript Bookmarklet URL Code.</li>
-  <li>Save the updated bookmark.</li>
-  <li>Visit the page you want to test for accessibility problems.</li>
-  <li>Activate your newly created bookmarklet. </li>
-</ol>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
 <textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';})();</textarea>
 </body>

@@ -1,0 +1,28 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Install Bookmarklets for Accessibility Testing Directly on iOS Device</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Install Bookmarklets for Accessibility Testing Directly on iOS</h1>
+<h2>Not so easy installation method:</h2>
+<ol>
+  <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
+  <li>Tap Select All.</li>
+  <li>Tap Copy.</li>
+  <li>Add this page as a bookmark to your mobile safari browser with the name you want to call this Bookmarklet.</li>
+  <li>Go to your bookmarks and naviate to the newly added bookmark.</li>
+  <li>Edit the bookmark you just created.</li>
+  <li>Delete the full http URL.</li>
+  <li>Paste the JavaScript Bookmarklet URL Code.</li>
+  <li>Save the updated bookmark.</li>
+  <li>Visit the page you want to test for accessibility problems.</li>
+  <li>Activate your newly created bookmarklet. </li>
+</ol>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea name="jscode" cols="40" rows="4" id="jscode">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();</textarea>
+</body>
+</html>

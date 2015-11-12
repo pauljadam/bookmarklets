@@ -56,20 +56,7 @@ function loadJS(file) {
   </script>
 
 <button onclick="loadJS('title.js');">Show Title</button>
-<h3>Not so easy installation method:</h3>
-<ol>
-  <li>On iOS Mobile Safari tap once on the textarea element below containing the JavaScript Bookmarklet URL Code.</li>
-  <li>Tap Select All.</li>
-  <li>Tap Copy.</li>
-  <li>Add this page as a bookmark to your mobile safari browser with the name you want to call this Bookmarklet.</li>
-  <li>Go to your bookmarks and naviate to the newly added bookmark.</li>
-  <li>Edit the bookmark you just created.</li>
-  <li>Delete the full http URL.</li>
-  <li>Paste the JavaScript Bookmarklet URL Code.</li>
-  <li>Save the updated bookmark.</li>
-  <li>Visit the page you want to test for accessibility problems.</li>
-  <li>Activate your newly created bookmarklet. </li>
-</ol>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
 <textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';})();</textarea>
 </body>
