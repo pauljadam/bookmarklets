@@ -2,6 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".axSpan, .openSpan, .closeSpan, .inputSpan, .altSpan");
+	    $("strong").remove(".openSpan, .closeSpan");
 		$('#success').remove();
 		$("*").each(function() {
 				$(this).css('outline','');
