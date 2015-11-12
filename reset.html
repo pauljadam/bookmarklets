@@ -1,0 +1,63 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Reset Page Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Reset Page Bookmarklet for Accessibility Testing</h1>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';})();">Reset Page Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+<a href="http://example.com/WORLD/africa/kenya.elephants.ap/index.html" 
+   reset="Read more about failed elephant evacuation">
+   Evacuation Crumbles Under Jumbo load
+</a>
+
+<label for="searchTerm"><br>
+Search for:</label>
+<input id="searchTerm" type="text" size="30" value="" name="searchTerm">
+<select title="Search in" id="scope">
+…
+</select> 
+
+<fieldset><legend>Phone number</legend>
+<input id="areaCode" name="areaCode" title="Area Code" 
+type="text" size="3" value="" >
+<input id="exchange" name="exchange" title="First three digits of phone number" 
+type="text" size="3" value="" >
+<input id="lastDigits" name="lastDigits" title="Last four digits of phone number" 
+type="text" size="4" value="" >
+</fieldset> 
+
+<p>
+  <input type="text" title="Type search term here"/> 
+  <input type="submit" value="Search"/>
+</p>
+<iframe src="banner-ad.html" id="testiframe" 
+  name="testiframe" title="Advertisement">
+    <a href="banner-ad.html">Advertisement</a>
+</iframe>
+
+<h2>Bookmarklet Demo</h2>
+<script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+
+<button onclick="loadJS('reset.js');">Show Reset Page</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';})();</textarea>
+</body>
+</html>
