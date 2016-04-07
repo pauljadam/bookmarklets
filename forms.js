@@ -11,7 +11,7 @@ javascript: (function() {
             var label = $('label[for="'+$(this).attr('id')+'"]');
 			var wrappedLabel;
             if(label.length <= 0) {
-            	$(this).attr('style','outline:orange 2px dashed;padding:2px;');
+            	$(this).attr('style','outline:red 2px dashed;padding:2px;');
                 var parentElem = $(this).parent(),
                     parentTagName = parentElem.get(0).tagName.toLowerCase();
                 if(parentTagName == "label") {
