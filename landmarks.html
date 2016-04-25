@@ -21,6 +21,83 @@
 </main>
 <div role="button">not button (nutton)</div>
 <div role="application">I have no idea how to ARIA</div>
+
+<div id="page-wrap">
+  <header>
+<a href="#">Company Name</a>
+    <form>
+      <input type="search" aria-label="Sitewide Search" placeholder="hours, directions, returns">
+      <input type="submit" value="Search Site"><br>
+    </form>
+    <ul id="quick-links">
+      <li><a href="#">Sign In</a></li>
+      <li><a href="#">Live Chat</a></li>
+      <li><a href="#">Shopping Cart</a></li>
+    </ul>
+    <nav>
+      <ul>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Online Outlet</a></li>
+        <li><a href="#">Financing</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Company</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact</a></li></ul></nav>
+    <p><a href="#">Home</a> &gt; <a href="#">Online Outlet</a> &gt; Product Name</p>
+  </header>
+  <main>
+    <h1>Product Name</h1>
+    <p>Product Image</p>
+    <p>Product Description</p>
+    <p>Product Options</p>
+    <p>
+      <button>Add Product Name To Cart</button>
+    </p>
+  </main>
+  <aside>
+    <h2>Related Products</h2>
+    <ul>
+      <li><a href="#" aria-label="Previous Set of Related Products">&lt;</a></li>
+      <li><a href="#">Product Foo</a><br>
+      <button>Add Foo To Cart</button></li>
+      <li><a href="#">Product Bar</a><br>
+      <button>Add Bar To Cart</button></li>
+      <li><a href="#">Product Baz</a><br>
+      <button>Add Baz To Cart</button></li>
+      <li><a href="#" aria-label="Next Set of Related Products">&gt;</a></li>
+    </ul>
+    <p><a href="#">Sign up for our Email Offers!</a>  </p>
+  </aside>
+  <footer>
+    <section>
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Locations</a></li></ul></section>
+    <section>
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Payment Options</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Hours</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Live Chat</a></li>
+      </ul>
+    </section>
+    <p>© 2018 Company Name, Inc. </p>
+  </footer>
+</div>
+
 <h2>Bookmarklet Demo</h2>
 <script type="application/javascript">
 function loadJS(file) {
