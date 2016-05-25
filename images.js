@@ -2,7 +2,6 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".altSpan");
-		$('#success').remove();
 		$("img").each(function() {
 			if (!this.hasAttribute('alt')) {
 				$(this).attr('style','outline:red 2px solid;padding:2px;');
@@ -25,6 +24,7 @@ javascript: (function() {
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Images Found!');
+				setTimeout(function(){ $('#success').remove(); s.remove(); }, 3000);
 			}
         }
         l()

@@ -2,7 +2,6 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan");
-		$('#success').remove();
         $("fieldset").attr('style','outline:2px solid green;');
         $("label").attr('style','outline:2px solid green;');
 		var inputs = $('input, textarea, select').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
@@ -60,6 +59,7 @@ javascript: (function() {
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Form Inputs Found!');
+				setTimeout(function(){ $('#success').remove(); s.remove(); }, 3000);
 			}
         }
         l()
