@@ -46,9 +46,12 @@ javascript: (function() {
 			}
 			if($(this).attr('aria-labelledby')) {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-labelledby=\""+$(this).attr('aria-labelledby')+"\"</span>");
-	            var labelledby = $('[id="'+$(this).attr('aria-labelledby')+'"]');
-				$(labelledby).attr('style','outline:green 2px solid;');
-				$(labelledby).prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+$(this).attr('aria-labelledby')+"\"</span>");
+				var labelledbyValue = $(this).attr('aria-labelledby');
+				var labelledbyArray = labelledbyValue.split(' ');
+				for (i = 0; i < labelledbyArray.length; i++) {
+		            $('[id="'+labelledbyArray[i]+'"]').attr('style','outline:green 2px solid;');
+					$('[id="'+labelledbyArray[i]+'"]').prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+labelledbyArray[i]+"\"</span>");
+				}
 			}
 			if($(this).attr('aria-required')) {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-required=\""+$(this).attr('aria-required')+"\"</span>");
@@ -80,13 +83,16 @@ javascript: (function() {
 				}
 		});
 		$('[aria-labelledby]').each(function(index) {
-			var searchAttr = $(this).attr('aria-labelledby');
-			var idString = "#";
-			idString += searchAttr;
-			if ($(idString).length <=0 && searchAttr) {
-				$(this).attr('style','outline:red 2px dotted;padding:2px;');
-				$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
-			}
+				var labelledbyValue = $(this).attr('aria-labelledby');
+				var labelledbyArray = labelledbyValue.split(' ');
+				for (i = 0; i < labelledbyArray.length; i++) {
+					var idString = "#";
+					idString += labelledbyArray[i];
+						if ($(idString).length <=0 && $('[id="'+labelledbyArray[i]+'"]')) {
+							$(this).attr('style','outline:red 2px dotted;padding:2px;');
+							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
+						}
+				}
 		});
         $("legend").each(function() {
 				$(this).attr('style','outline:green 2px solid;padding:2px;');
