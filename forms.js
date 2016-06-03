@@ -25,7 +25,7 @@ javascript: (function() {
 			}
             $(label).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label for=\""+$(this).attr('id')+"\"&gt;</span>");
             $(label).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
-            $(wrappedLabel).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO FOR&gt;</span>");
+            $(wrappedLabel).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label❓NO FOR&gt;</span>");
             $(wrappedLabel).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
 	        $(wrappedLabel).attr('style','outline:2px dashed orange;');
 			if($(this).attr('title')) {
@@ -54,10 +54,10 @@ javascript: (function() {
 				}
 			}
 			if($(this).attr('aria-required')) {
-            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-required=\""+$(this).attr('aria-required')+"\"</span>");
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&#9937;aria-required=\""+$(this).attr('aria-required')+"\"</span>");
 			}
 			if($(this).attr('aria-invalid')) {
-            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-invalid=\""+$(this).attr('aria-invalid')+"\"</span>");
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&#9940;aria-invalid=\""+$(this).attr('aria-invalid')+"\"</span>");
 			}
         });
 		$('label').each(function(index) {
@@ -66,7 +66,7 @@ javascript: (function() {
 			idString += forAttr;
 			if ($(idString).length <=0 && $(this).attr('for')) {
 				$(this).attr('style','outline:red 2px dotted;padding:2px;');
-				$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO ID MATCH&gt;</span>");
+				$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label❌NO ID MATCH&gt;</span>");
 				$(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
 			}
 		});
@@ -78,7 +78,7 @@ javascript: (function() {
 					idString += describedbyArray[i];
 						if ($(idString).length <=0 && $('[id="'+describedbyArray[i]+'"]')) {
 							$(this).attr('style','outline:red 2px dotted;padding:2px;');
-							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
+							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">❌NO ID MATCH</span>");
 						}
 				}
 		});
@@ -90,7 +90,7 @@ javascript: (function() {
 					idString += labelledbyArray[i];
 						if ($(idString).length <=0 && $('[id="'+labelledbyArray[i]+'"]')) {
 							$(this).attr('style','outline:red 2px dotted;padding:2px;');
-							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
+							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">❌NO ID MATCH</span>");
 						}
 				}
 		});
