@@ -107,8 +107,19 @@
     <input title="Title Attribute">
   </p>
   <p>
-    <input aria-label="aria-label attribute">
+    <input aria-label="aria-label attribute" aria-describedby="password-format password-error" aria-invalid="true">
   </p>
+  <p>
+    <label for="password">Password *</label><br>
+    <input type="text" name="password" id="password" aria-describedby="password-format" aria-required="true">
+    <span id="password-format">8 digits, 1 upper case, 1 number, 1 special character </span>
+  </p>
+  <p>
+    <label for="date-missing">Date</label><br>
+    <input type="text" name="date-missing" id="date-missing" aria-describedby="non-existent-id">
+    <span id="date-format">MM/DD/YYYY</span>
+  </p>
+  <p><input aria-labelledby="non-existent-id">I have no label</p>
   <p>
     <label><input type="radio" name="RadioGroup3" value="radio1" id="RadioGroup3_0"><a href="http://www.google.com">Radio Link 1</a> wrapped label</label>
       <br>

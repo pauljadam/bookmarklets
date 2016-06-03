@@ -32,7 +32,25 @@ javascript: (function() {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;outline:dashed 2px orange;speak:literal-punctuation;\">title=\""+$(this).attr('title')+"\"</span>");
 			}
 			if($(this).attr('aria-label')) {
-            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;outline:solid 2px green;speak:literal-punctuation;\">aria-label=\""+$(this).attr('aria-label')+"\"</span>");
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-label=\""+$(this).attr('aria-label')+"\"</span>");
+			}
+			if($(this).attr('aria-describedby')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-describedby=\""+$(this).attr('aria-describedby')+"\"</span>");
+	            var describedby = $('[id="'+$(this).attr('aria-describedby')+'"]');
+				$(describedby).attr('style','outline:green 2px solid;');
+				$(describedby).prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+$(this).attr('aria-describedby')+"\"</span>");
+			}
+			if($(this).attr('aria-labelledby')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-labelledby=\""+$(this).attr('aria-labelledby')+"\"</span>");
+	            var labelledby = $('[id="'+$(this).attr('aria-labelledby')+'"]');
+				$(labelledby).attr('style','outline:green 2px solid;');
+				$(labelledby).prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+$(this).attr('aria-labelledby')+"\"</span>");
+			}
+			if($(this).attr('aria-required')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-required=\""+$(this).attr('aria-required')+"\"</span>");
+			}
+			if($(this).attr('aria-invalid')) {
+            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-invalid=\""+$(this).attr('aria-invalid')+"\"</span>");
 			}
         });
 		$('label').each(function(index) {
@@ -43,6 +61,24 @@ javascript: (function() {
 				$(this).attr('style','outline:red 2px dotted;padding:2px;');
 				$(this).prepend("<span class=\"openSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;label NO ID MATCH&gt;</span>");
 				$(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/label&gt;</span>");
+			}
+		});
+		$('[aria-describedby]').each(function(index) {
+			var searchAttr = $(this).attr('aria-describedby');
+			var idString = "#";
+			idString += searchAttr;
+			if ($(idString).length <=0 && searchAttr) {
+				$(this).attr('style','outline:red 2px dotted;padding:2px;');
+				$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
+			}
+		});
+		$('[aria-labelledby]').each(function(index) {
+			var searchAttr = $(this).attr('aria-labelledby');
+			var idString = "#";
+			idString += searchAttr;
+			if ($(idString).length <=0 && searchAttr) {
+				$(this).attr('style','outline:red 2px dotted;padding:2px;');
+				$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
 			}
 		});
         $("legend").each(function() {
