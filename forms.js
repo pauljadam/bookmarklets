@@ -36,9 +36,13 @@ javascript: (function() {
 			}
 			if($(this).attr('aria-describedby')) {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-describedby=\""+$(this).attr('aria-describedby')+"\"</span>");
-	            var describedby = $('[id="'+$(this).attr('aria-describedby')+'"]');
-				$(describedby).attr('style','outline:green 2px solid;');
-				$(describedby).prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+$(this).attr('aria-describedby')+"\"</span>");
+				var describedbyValue = $(this).attr('aria-describedby');
+				var describedbyArray = describedbyValue.split(' ');
+				for (i = 0; i < describedbyArray.length; i++) {
+		            var describedby = $('[id="'+describedbyArray[i]+'"]');
+					$(describedby).attr('style','outline:green 2px solid;');
+					$(describedby).prepend("<span class=\"inputSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">id=\""+describedbyArray[i]+"\"</span>");
+				}
 			}
 			if($(this).attr('aria-labelledby')) {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-labelledby=\""+$(this).attr('aria-labelledby')+"\"</span>");
@@ -64,13 +68,16 @@ javascript: (function() {
 			}
 		});
 		$('[aria-describedby]').each(function(index) {
-			var searchAttr = $(this).attr('aria-describedby');
-			var idString = "#";
-			idString += searchAttr;
-			if ($(idString).length <=0 && searchAttr) {
-				$(this).attr('style','outline:red 2px dotted;padding:2px;');
-				$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
-			}
+				var describedbyValue = $(this).attr('aria-describedby');
+				var describedbyArray = describedbyValue.split(' ');
+				for (i = 0; i < describedbyArray.length; i++) {
+					var idString = "#";
+					idString += describedbyArray[i];
+						if ($(idString).length <=0 && $('[id="'+describedbyArray[i]+'"]')) {
+							$(this).attr('style','outline:red 2px dotted;padding:2px;');
+							$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">NO ID MATCH</span>");
+						}
+				}
 		});
 		$('[aria-labelledby]').each(function(index) {
 			var searchAttr = $(this).attr('aria-labelledby');

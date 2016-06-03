@@ -107,12 +107,17 @@
     <input title="Title Attribute">
   </p>
   <p>
-    <input aria-label="aria-label attribute" aria-describedby="password-format password-error" aria-invalid="true">
+    <input aria-label="aria-label attribute" aria-invalid="true">
   </p>
   <p>
     <label for="password">Password *</label><br>
-    <input type="text" name="password" id="password" aria-describedby="password-format" aria-required="true">
+    <input type="text" name="password" id="password" aria-describedby="password-error password-format" aria-required="true">
     <span id="password-format">8 digits, 1 upper case, 1 number, 1 special character </span>
+  </p>
+  <p>
+    <label for="password">Password2 *</label><br>
+    <input type="text" name="password2" id="password2" aria-describedby="password2-error password2-format" aria-required="true" aria-invalid="true"><span id="password2-error">Please enter your password in the required format.</span>
+    <span id="password2-format">8 digits, 1 upper case, 1 number, 1 special character </span>
   </p>
   <p>
     <label for="date-missing">Date</label><br>
