@@ -1,0 +1,144 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Tables Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Tables Bookmarklet for Accessibility Testing</h1>
+<p>Tables Bookmarklet for Accessibility Testing inserts a . </p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';})();">Tables Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+ <table>
+  <tr>
+    <td> </td>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <th>8:00-9:00</th>
+    <td>Meet with Sam</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <th>9:00-10:00</th>
+    <td> </td>
+    <td> </td>
+    <td>Doctor Williams</td>
+    <td>Sam again</td>
+    <td>Leave for San Antonio</td>
+  </tr>
+</table> 
+ <table border="1">
+  <caption>Contact Information</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Name</th>
+    <th scope="col">Phone#</th>
+    <th scope="col">Fax#</th>
+    <th scope="col">City</th>
+  </tr><tr>
+    <td>1.</td>
+    <th scope="row">Joel Garner</th>
+    <td>412-212-5421</td>
+    <td>412-212-5400</td>
+    <td>Pittsburgh</td>
+  </tr><tr>
+    <td>2.</td>
+    <th scope="row">Clive Lloyd</th>
+    <td>410-306-1420</td>
+    <td>410-306-5400</td>
+    <td>Baltimore</td>
+  </tr><tr>
+    <td>3.</td>
+    <th scope="row">Gordon Greenidge</th>
+    <td>281-564-6720</td>
+    <td>281-511-6600</td>
+    <td>Houston</td>
+  </tr>
+</table> 
+<table summary="Schedule for Route 7 going downtown. Service begins 
+at 4:00 AM and ends at midnight. Intersections are listed in the top row. 
+Find the intersection closest to your starting point or destination, then read 
+down that column to find out what time the bus leaves that intersection.">
+  <tr>
+    <th scope="col">State & First</th>
+    <th scope="col">State & Sixth</th>
+    <th scope="col">State & Fifteenth</th>
+    <th scope="col">Fifteenth & Morrison</th>
+  </tr>
+  <tr>
+    <td>4:00</td>
+    <td>4:05</td>
+    <td>4:11</td>
+    <td>4:19</td>
+  </tr>
+  …
+</table>  
+ <table summary="layout table">
+ <tr>
+   <th colspan=3>Page Title</th>
+ </tr>
+ <tr>
+   <td><div>navigation content</div></td>
+   <td><div>main content</div></td>
+   <td><div>right sidebar content</div></td>
+ </tr>
+ <tr>
+   <td colspan=3>footer</td>
+ </tr>
+ </table>
+  <table>
+   <tr>
+     <th rowspan="2" id="h">Homework</th>
+     <th colspan="3" id="e">Exams</th>
+     <th colspan="3" >Projects</th>
+   </tr>
+   <tr>
+     <th id="e1" headers="e">1</th>
+     <th id="e2" headers="e">2</th>
+     <th id="ef" headers="e">Final</th>
+     <th id="p1" headers="p">1</th>
+     <th id="p2" headers="p">2</th>
+     <th id="pf" headers="p">Final</th>
+   </tr>
+   <tr>
+     <td headers="h">15%</td>       
+     <td headers="e p1">15%</td>  
+     <td headers="e p2">15%</td>  
+     <td headers="e pf">20%</td>  
+     <td headers="e e1">10%</td>  
+     <td headers="e e2">10%</td>  
+     <td headers="non-existent-id ef">15%</td>  
+   </tr>
+</table>
+<h2>Bookmarklet Demo
+  <script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+
+</h2>
+<button onclick="loadJS('tables.js');">Show Tables Info</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';})();</textarea>
+</body>
+</html>
