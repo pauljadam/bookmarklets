@@ -8,6 +8,7 @@
 <body>
 <h1>Bookmarklets for Accessibility Testing</h1>
 <p>Drag and drop the (JavaScript Bookmarklet) link enclosed in (parentheses) into your bookmarks bar to use in any browser. The first link in each list item is to the bookmarklet demonstration page.</p>
+<p>Bookmarklets now support accessibility testing of same-domain &lt;iframe&gt; elements but not cross-domain iframes. </p>
 <ol>
   <li><a href="forms.html">Forms</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';}})();">Forms</a>)</li>
   <li><a href="headings.html">Headings</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();">Headings</a>)</li>
@@ -24,6 +25,6 @@
 </ol>
 <p><a href="http://pauljadam.com/bookmarklets/">http://pauljadam.com/bookmarklets/</a></p>
 <p>GitHub Repo: <a href="https://github.com/pauljadam/bookmarklets">https://github.com/pauljadam/bookmarklets</a></p>
-<p>TODO:  WAI-ARIA Attriubtes &amp; Visual Icons. Possibly &lt;iframe&gt; tags. Disable CSS? &lt;audio&gt;&lt;video&gt;?</p>
+<p>TODO:  WAI-ARIA Attriubtes &amp; Visual Icons.  Disable CSS? &lt;audio&gt;&lt;video&gt;?</p>
 </body>
 </html>
