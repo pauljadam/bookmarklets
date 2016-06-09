@@ -10,7 +10,7 @@
 <h1>Page Title + Language Bookmarklet for Accessibility Testing</h1>
 <p>Page Title + Language Bookmarklet for Accessibility Testing displays a JavaScript alert() dialog with the title of the document and the language if present.</p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';})();">Page Title + Lang Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';}})();">Page Title + Lang Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Bookmarklet Demo</h2>
 <button onclick="loadJS('lang.js');">Show Page Title + Language</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>

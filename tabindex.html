@@ -9,7 +9,7 @@
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
 <h1>Tabindex Bookmarklet for Accessibility Testing</h1>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';})();" tabindex="5">Tabindex Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';}})();" tabindex="5">Tabindex Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <p><a href="http://PaulJAdam.com" tabindex="2">PaulJAdam.com</a></p>
 <p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png" alt="" tabindex="0"></p>

@@ -1,0 +1,60 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Iframes Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Iframes Bookmarklet for Accessibility Testing</h1>
+<p>Forms Bookmarklet for Accessibility Testing inserts a solid green outline around labels that have FOR attributes with ID matches, a dashed orange outline around labels with NO FOR attributes, a dotted red outline around labels with no FOR/ID match, a dashed red outline around inputs with no explicit (FOR/ID) labels, and a dotted red outline around inputs with NO ID attributes. &lt;label&gt; elements that have a FOR are wrapped with a &lt;label for=&quot;&quot;&gt; indicator, if no FOR attribute they're wrapped in a &lt;label NO FOR&gt; indicator, if &lt;label&gt; has a FOR that does not match an existing ID it's wrapped in a &lt;label NO ID MATCH&gt; indicator. &lt;fieldset&gt; and &lt;legend&gt; are also shown. </p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();">Iframes Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+<iframe width="100%" height="300px" src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<p>When the target of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+<iframe src="banner-ad.html" id="bannertestiframe" 
+  name="bannertestiframe" title="Advertisement">
+    <a href="banner-ad.html">Advertisement</a>
+</iframe>
+<iframe src="test.html" id="testiframe" 
+  name="testiframe" title="Test">
+    <a href="test.html">Test</a>
+</iframe>
+<iframe src="http://pauljadam.com/demos"></iframe>
+<iframe src="http://pauljadam.com/bookmarklets" title="Bookmarklets"></iframe>
+<iframe src="http://pauljadam.com/demos" title="Demos" name="name attribute"></iframe>
+<iframe src="http://pauljadam.com/bookmarklets" aria-label="Bookmarklets"></iframe>
+
+<h2>Bookmarklet Demo
+  <script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+	var iframes = document.getElementsByTagName('iframe');
+	for (i=0; i<iframes.length; i++) {
+		var jsElm2 = document.createElement("script");
+    	jsElm2.type = "application/javascript";
+   		jsElm2.src = file;
+		iframes[i].contentDocument.body.appendChild(jsElm2);
+	}
+}
+  </script>
+
+</h2>
+<button onclick="loadJS('iframes.js');">Show Iframes Info</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();</textarea>
+</body>
+</html>

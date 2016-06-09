@@ -10,7 +10,7 @@
 <h1>Headings Bookmarklet for Accessibility Testing </h1>
 <p>Headings Bookmarklet for Accessibility Testing inserts a black on yellow opening and closing tag into the DOM around each H1-H6 and WAI-ARIA role=heading aria-level=1-6</p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <h1>This is a heading level 1.</h1>
 <p>This is another paragraph.</p>
@@ -36,6 +36,8 @@
 <p>This is another paragraph.</p>
 <b role="heading" aria-level="6">This is a role=heading aria-level=6.</b>
 <p>This is another paragraph.</p>
+<iframe src="http://pauljadam.com/bookmarklets/"></iframe>
+<iframe src="http://pauljadam.com/demos/"></iframe>
 <h2>Bookmarklet Demo</h2>
 <script type="application/javascript">
 function loadJS(file) {
@@ -47,11 +49,18 @@ function loadJS(file) {
     jsElm.src = file;
     // finally insert the element to the body element in order to load the script
     document.body.appendChild(jsElm);
+	var iframes = document.getElementsByTagName('iframe');
+	for (i=0; i<iframes.length; i++) {
+		var jsElm2 = document.createElement("script");
+    	jsElm2.type = "application/javascript";
+   		jsElm2.src = file;
+		iframes[i].contentDocument.body.appendChild(jsElm2);
+	}
 }
 </script>
-<button onclick="loadJS('headings.js');">Show Headings</button>
+<button onclick="loadJS('http://pauljadam.com/bookmarklets/headings.js');">Show Headings</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();</textarea>
 </body>
 </html>

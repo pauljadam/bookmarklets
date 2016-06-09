@@ -1,15 +1,15 @@
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
-<title>Title Bookmarklet for Accessibility Testing</title>
+<title>Title Attributes Bookmarklet for Accessibility Testing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
-<h1>Title Bookmarklet for Accessibility Testing</h1>
+<h1>Title Attributes Bookmarklet for Accessibility Testing</h1>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';})();">Title Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';}})();">Title Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <a href="http://example.com/WORLD/africa/kenya.elephants.ap/index.html" 
    title="Read more about failed elephant evacuation">

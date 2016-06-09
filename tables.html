@@ -10,7 +10,7 @@
 <h1>Tables Bookmarklet for Accessibility Testing</h1>
 <p>Tables Bookmarklet for Accessibility Testing inserts data table tags and attributes into the DOM with a yellow highlighted background so you can quickly identify the accessibility errors. &lt;th&gt; cells show a 👍thumbs up emoji. &lt;caption&gt; tags show a🎓graduation cap emoji. Scope attributes show a 🍨ice cream scoop emoji. Headers and summary attributes show a ❓red question mark emoji. If an ID Reference to a non-existent ID exist then a red x emoji error shows ❌NO ID MATCH. &lt;table&gt; tags are outlined in Olive, &lt;th&gt; are outlined in green, &lt;td&gt; tags have a orange dashed outline. Missing ID reference error cells have a red dotted outline. </p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';})();">Tables Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';}})();">Tables Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
  <table>
   <tr>
