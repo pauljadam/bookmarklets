@@ -1,0 +1,129 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Lists Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Lists Bookmarklet for Accessibility Testing</h1>
+<p>Lists Bookmarklet for Accessibility Testing visually highlights the location and accessibility properties of &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; elements. </p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();">Lists Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+ <ol>
+  <li>Mix eggs and milk in a bowl.</li>
+  <li>Add salt and pepper.</li>
+</ol>
+<ul>
+  <li>Milk</li>
+  <li>Eggs</li>
+  <li>Butter</li>
+</ul>
+<dl>
+  <dt>blink</dt>
+  <dd>turn on and off between .5 and 3 times per second
+  </dd>
+</dl> 
+<dl>
+<dt><span>name:</span></dt><dd><span>John Doe</span></dd>
+<dt><span>tel:</span></dt><dd><span>01-2345678</span></dd>
+<dt><span>fax:</span></dt><dd><span>02-3456789</span></dd>
+<dt><span>email:</span></dt><dd><span>johndoe@someemail.com</span></dd>
+</dl>
+<a name="categories" id="categories"></a><h2>Product Categories</h2>
+<ul class="navigation">
+    <li><a href="kitchen.html">Kitchen</a></li>
+    <li><a href="bedbath.html">Bed &amp; Bath</a></li>
+    <li><a href="dining.html">Fine Dining</a></li>
+    <li><a href="lighting.html">Lighting</a></li>
+    <li><a href="storage.html">Storage</a></li>
+</ul> 
+<style>
+ul.red {
+    border-left: 5px solid red;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+</style>
+<p>List with a red left border:</p>
+<ul class="red">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+<h2>A Nested List</h2>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+    <li>Black tea</li>
+    <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+<style>
+ul#menu {
+    padding: 0;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: orange;
+}
+</style>
+
+<h2>Horizontal List</h2>
+
+<ul id="menu">
+  <li><a href="/html/default.asp">HTML</a></li>
+  <li><a href="/css/default.asp">CSS</a></li>
+  <li><a href="/js/default.asp">JavaScript</a></li>
+  <li><a href="/php/default.asp">PHP</a></li>
+</ul>
+<iframe src="http://pauljadam.com/demos"></iframe>
+<iframe src="http://pauljadam.com/bookmarklets" title="Bookmarklets"></iframe>
+
+<h2>Bookmarklet Demo
+  <script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+	var iframes = document.getElementsByTagName('iframe');
+	for (i=0; i<iframes.length; i++) {
+		var jsElm2 = document.createElement("script");
+    	jsElm2.type = "application/javascript";
+   		jsElm2.src = file;
+		iframes[i].contentDocument.body.appendChild(jsElm2);
+	}
+}
+  </script>
+
+</h2>
+<button onclick="loadJS('lists.js');">Show Lists Info</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();</textarea>
+</body>
+</html>

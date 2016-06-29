@@ -8,7 +8,7 @@
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
 <h1>Iframes Bookmarklet for Accessibility Testing</h1>
-<p>Forms Bookmarklet for Accessibility Testing inserts a solid green outline around labels that have FOR attributes with ID matches, a dashed orange outline around labels with NO FOR attributes, a dotted red outline around labels with no FOR/ID match, a dashed red outline around inputs with no explicit (FOR/ID) labels, and a dotted red outline around inputs with NO ID attributes. &lt;label&gt; elements that have a FOR are wrapped with a &lt;label for=&quot;&quot;&gt; indicator, if no FOR attribute they're wrapped in a &lt;label NO FOR&gt; indicator, if &lt;label&gt; has a FOR that does not match an existing ID it's wrapped in a &lt;label NO ID MATCH&gt; indicator. &lt;fieldset&gt; and &lt;legend&gt; are also shown. </p>
+<p>Iframes Bookmarklet for Accessibility Testing visually highlights the location and accessibility properties of &lt;iframe&gt; elements. </p>
 <h2>Installation</h2>
 <p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();">Iframes Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
