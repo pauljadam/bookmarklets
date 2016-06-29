@@ -12,7 +12,7 @@
 <h2>Installation</h2>
 <p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();">Lists Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
- <ol>
+<ol>
   <li>Mix eggs and milk in a bowl.</li>
   <li>Add salt and pepper.</li>
 </ol>
@@ -23,23 +23,27 @@
 </ul>
 <dl>
   <dt>blink</dt>
-  <dd>turn on and off between .5 and 3 times per second
-  </dd>
-</dl> 
-<dl>
-<dt><span>name:</span></dt><dd><span>John Doe</span></dd>
-<dt><span>tel:</span></dt><dd><span>01-2345678</span></dd>
-<dt><span>fax:</span></dt><dd><span>02-3456789</span></dd>
-<dt><span>email:</span></dt><dd><span>johndoe@someemail.com</span></dd>
+  <dd>turn on and off between .5 and 3 times per second </dd>
 </dl>
-<a name="categories" id="categories"></a><h2>Product Categories</h2>
+<dl>
+  <dt><span>name:</span></dt>
+  <dd><span>John Doe</span></dd>
+  <dt><span>tel:</span></dt>
+  <dd><span>01-2345678</span></dd>
+  <dt><span>fax:</span></dt>
+  <dd><span>02-3456789</span></dd>
+  <dt><span>email:</span></dt>
+  <dd><span>johndoe@someemail.com</span></dd>
+</dl>
+<a name="categories" id="categories"></a>
+<h2>Product Categories</h2>
 <ul class="navigation">
-    <li><a href="kitchen.html">Kitchen</a></li>
-    <li><a href="bedbath.html">Bed &amp; Bath</a></li>
-    <li><a href="dining.html">Fine Dining</a></li>
-    <li><a href="lighting.html">Lighting</a></li>
+  <li><a href="kitchen.html">Kitchen</a></li>
+  <li><a href="bedbath.html">Bed &amp; Bath</a></li>
+  <li><a href="dining.html">Fine Dining</a></li>
+  <li><a href="lighting.html">Lighting</a></li>
   <li><a href="storage.html">Storage</a></li>
-</ul> 
+</ul>
 <style>
 ul.red {
     border-left: 5px solid red;
@@ -55,13 +59,12 @@ ul.red {
   <li>Coca Cola</li>
 </ul>
 <h2>A Nested List</h2>
-
 <ul>
   <li>Coffee</li>
   <li>Tea
     <ul>
-    <li>Black tea</li>
-    <li>Green tea</li>
+      <li>Black tea</li>
+      <li>Green tea</li>
     </ul>
   </li>
   <li>Milk</li>
@@ -87,9 +90,7 @@ ul#menu li a:hover {
     background-color: orange;
 }
 </style>
-
 <h2>Horizontal List</h2>
-
 <ul id="menu">
   <li><a href="/html/default.asp">HTML</a></li>
   <li><a href="/css/default.asp">CSS</a></li>
@@ -97,23 +98,48 @@ ul#menu li a:hover {
   <li><a href="/php/default.asp">PHP</a></li>
 </ul>
 <ul>
-<li>blah</li>
-<li>what</li>
-<p>paragraph</p>
+  <li>blah</li>
+  <li>what</li>
+  <p>paragraph</p>
 </ul>
 <ol>
-<li>blah</li>
-<li>what</li>
-<p>paragraph</p>
+  <li>blah</li>
+  <li>what</li>
+  <p>paragraph</p>
 </ol>
 <ul>
-<li><p>blah</p></li>
-<li><p>what</p></li>
+  <li>
+    <p>blah</p>
+  </li>
+  <li>
+    <p>what</p>
+  </li>
+</ul>
+<ul class="nav-aside">
+  <li class="nav-aside__title">
+    <p class="h5 ff-hm">CAREERS </p>
+  </li>
+  <li>
+    <ul class="nav-aside">
+      <li class="nav-aside__title nav-aside__title--2"><a href="#" class="a4">Search jobs</a></li>
+      <li class="nav-aside__title nav-aside__title--2"><a href="#" class="a4">About Us</a></li>
+      <li class="nav-aside__title nav-aside__title--2"><a href="#" class="a4">Our Stories</a></li>
+      <li class="nav-aside__title nav-aside__title--2"><a href="#" class="a4">Career Development</a></li>
+      <li class="nav-aside__title nav-aside__title--2"><a href="#" class="a4">FAQS</a></li>
+    </ul>
+    <p> <a class="a2" href="#"> London<br>
+      </a><a class="a2" href="#"> Los Angeles<br>
+      </a><a class="a2" href="#"> New York<br>
+      </a><a class="a2" href="#"> San Francisco<br>
+      </a><a class="a2" href="#"> South Beach<br>
+      </a><a class="a2" href="#"> London</a></p>
+    <p> <strong> Coming Soon:&nbsp;</strong></p>
+    <p> <a class="a2" href="#"> Doha</a></p>
+  </li>
 </ul>
 <iframe src="http://pauljadam.com/demos"></iframe>
 <iframe src="http://pauljadam.com/bookmarklets" title="Bookmarklets"></iframe>
-
-<h2>Bookmarklet Demo
+<h2>Bookmarklet Demo 
   <script type="application/javascript">
 function loadJS(file) {
     // DOM: Create the script element
@@ -132,12 +158,12 @@ function loadJS(file) {
 		iframes[i].contentDocument.body.appendChild(jsElm2);
 	}
 }
-  </script>
-
+  </script> 
 </h2>
 <button onclick="loadJS('lists.js');">Show Lists Info</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
-<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label>
+<br>
 <textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();</textarea>
 </body>
 </html>
