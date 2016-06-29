@@ -3,6 +3,12 @@ javascript: (function() {
         function l() {
         $("strong").remove(".openSpan, .closeSpan");
 		$("ul, ol, dl").attr('style','outline:green 2px solid;padding:2px;list-style-position: inside;');
+		if ($('ul').children('p')) {
+			$('ul').children('p').attr('style','outline:2px solid red;');
+			$('ul').children('p').parents('ul').attr('style','outline:2px solid red;');
+			$('ul').children('p').parents('ul').prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;;speak:literal-punctuation;\">❌NO CHILD LI</strong>");
+
+		}
 		$("ul").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;;speak:literal-punctuation;\">&lt;ul&gt;📝</strong>");
         $("ul").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/ul&gt;</strong>");
 		$("ol").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;;speak:literal-punctuation;\">&lt;ol&gt;🔢</strong>");
