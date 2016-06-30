@@ -18,9 +18,9 @@ javascript: (function() {
 					}
 				} else if ($(this).attr('headers')) {
 					if ($(this).attr('id')) {
-						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th ❓headers=\""+$(this).attr('headers')+"\" id=\""+$(this).attr('id')+"\"&gt;👍</span>");
+						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th❓headers=\""+$(this).attr('headers')+"\" id=\""+$(this).attr('id')+"\"&gt;👍</span>");
 						} else {
-						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th ❓headers=\""+$(this).attr('headers')+"\"&gt;👍</span>");
+						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th❓headers=\""+$(this).attr('headers')+"\"&gt;👍</span>");
 					}
 				} else if ($(this).attr('id')) {
 					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th id=\""+$(this).attr('id')+"\"&gt;👍</span>");
@@ -38,7 +38,9 @@ javascript: (function() {
         });
         $("table").each(function() {
 				if ($(this).attr('summary')) {
-					$(this).before("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;table ❓summary=\""+$(this).attr('summary')+"\"&gt;</span>");
+					$(this).before("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;table❓summary=\""+$(this).attr('summary')+"\"&gt;</span>");
+				} else if ($(this).attr('role')) {
+					$(this).before("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;table❓role=\""+$(this).attr('role')+"\"&gt;</span>");
 				} else {
             		$(this).before("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;table&gt;</span>");
 				}
