@@ -1,0 +1,96 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>ARIA Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>ARIA Bookmarklet for Accessibility Testing</h1>
+<p>Forms Bookmarklet for Accessibility Testing inserts a solid green outline around labels that have FOR attributes with ID matches, a dashed orange outline around labels with NO FOR attributes, a dotted red outline around labels with no FOR/ID match, a dashed red outline around inputs with no explicit (FOR/ID) labels, and a dotted red outline around inputs with NO ID attributes. &lt;label&gt; elements that have a FOR are wrapped with a &lt;label for=&quot;&quot;&gt; indicator, if no FOR attribute they're wrapped in a &lt;label NO FOR&gt; indicator, if &lt;label&gt; has a FOR that does not match an existing ID it's wrapped in a &lt;label NO ID MATCH&gt; indicator. &lt;fieldset&gt; and &lt;legend&gt; are also shown. </p>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';}})();">ARIA Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+<button id="trigger-modal" aria-haspopup="true">Dynamic Help</button>
+<a href="http://google.com/" aria-haspopup="true">Google</a>
+<div role="alertdialog" aria-labelledby="alertHeading" aria-describedby="alertText" tabindex="0"><div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">Employee's Birth Date is after their hire date. Please verify the birth date and hire date.</div><button id="firstButton">Save and Continue</button><button id="lastButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div></div>
+<b role="heading" aria-level="4">This is a role=heading aria-level=4.</b>
+<h2>aria-labelledby</h2>
+<p><img src="http://pauljadam.com/demos/360bridge.jpg" aria-labelledby="penny-label" width="320" height="213"></p>
+<p id="penny-label">Pennybacker Bridge via aria-labelledby</p>
+<h2>aria-label</h2>
+<p><img src="http://pauljadam.com/demos/360bridge.jpg" aria-label="Pennybacker Bridge via aria-label" width="320" height="213"></p>
+<p>
+  <input aria-label="aria-label attribute" aria-invalid="true">
+</p>
+<p>
+  <label for="password">Password *</label>
+  <br>
+  <input type="text" name="password" id="password" aria-describedby="password-error password-format" aria-required="true">
+  <span id="password-format">8 digits, 1 upper case, 1 number, 1 special character </span> </p>
+<p>
+  <label for="password">Password2 *</label>
+  <br>
+  <input type="text" name="password2" id="password2" aria-describedby="password2-error password2-format" aria-required="true" aria-invalid="true">
+  <span id="password2-error">Please enter your password in the required format.</span> <span id="password2-format">8 digits, 1 upper case, 1 number, 1 special character </span> </p>
+<p>
+  <label for="date-missing">Date</label>
+  <br>
+  <input type="text" name="date-missing" id="date-missing" aria-describedby="non-existent-id">
+  <span id="date-format">MM/DD/YYYY</span> </p>
+<p>
+  <input aria-labelledby="non-existent-id">
+  I have no label</p>
+<p><span id="lblby1">This message will self destruct in</span>
+  <input id="lblby2" type="number" aria-labelledby="lblby1 lblby2 lblby3">
+  <span id="lblby3">seconds.</span>
+<p>
+  <input type="radio" name="RadioGroup3" value="radio2" id="RadioGroup3_1" aria-labelledby="radio-aria-label">
+  <span id="radio-aria-label"><a href="http://www.google.com">Radio Link 2</a> no label just aria</span> </p>
+<div id="errors" role="alert" aria-atomic="true">
+  <p>Please enter your first name.</p>
+  <p>Please enter your last name.</p>
+  <p>Please enter your email address.</p>
+</div>
+<button aria-expanded="true" aria-controls="dynamic-button-container"><span aria-hidden="true">[-]</span> Dynamic Section</button>
+<div role="tablist"> <span role="tab" aria-expanded="false" tabindex="0" aria-controls="tp1">Section</span> <span role="tab" aria-expanded="true" aria-selected="true" tabindex="0" aria-controls="tp2"><span aria-hidden="true">[</span>Section<span aria-hidden="true">]</span></span> <span role="tab" aria-expanded="false" tabindex="0" aria-controls="tp3">Section</span> </div>
+<div role="tabpanel" id="tp1" style="display:none">
+  <p>Tab Panel 1</p>
+</div>
+<div role="tabpanel" id="tp2">
+  <p>Tab Panel 2</p>
+</div>
+<div role="tabpanel" id="tp3" style="display:none">
+  <p>Tab Panel 3</p>
+</div>
+<main role="main">
+  <div id="header" role="banner">A banner image and introductory title</div>
+  <div id="sitelookup" role="search">....</div>
+  <div id="nav" role="navigation">...a list of links here ... </div>
+  <div id="content" role="main"> ... Ottawa is the capital of Canada ...</div>
+  <div id="rightsideadvert" role="complementary">....an advertisement here...</div>
+  <div id="footer" role="contentinfo">(c)The Freedom Company, 123 Freedom Way, Helpville, USA</div>
+</main>
+<div role="button">not button (nutton)</div>
+<div role="application">I have no idea how to ARIA</div>
+<h2>Bookmarklet Demo</h2>
+<script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+<button onclick="loadJS('aria.js');">Show ARIA Info</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label>
+<br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';}})();</textarea>
+</body>
+</html>
