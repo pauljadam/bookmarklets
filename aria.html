@@ -8,18 +8,16 @@
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
 <h1>ARIA Bookmarklet for Accessibility Testing</h1>
-<p>Forms Bookmarklet for Accessibility Testing inserts a solid green outline around labels that have FOR attributes with ID matches, a dashed orange outline around labels with NO FOR attributes, a dotted red outline around labels with no FOR/ID match, a dashed red outline around inputs with no explicit (FOR/ID) labels, and a dotted red outline around inputs with NO ID attributes. &lt;label&gt; elements that have a FOR are wrapped with a &lt;label for=&quot;&quot;&gt; indicator, if no FOR attribute they're wrapped in a &lt;label NO FOR&gt; indicator, if &lt;label&gt; has a FOR that does not match an existing ID it's wrapped in a &lt;label NO ID MATCH&gt; indicator. &lt;fieldset&gt; and &lt;legend&gt; are also shown. </p>
 <h2>Installation</h2>
 <p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';}})();">ARIA Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <button id="trigger-modal" aria-haspopup="true">Dynamic Help</button>
 <a href="http://google.com/" aria-haspopup="true">Google</a>
-<div role="alertdialog" aria-labelledby="alertHeading" aria-describedby="alertText" tabindex="0"><div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">Employee's Birth Date is after their hire date. Please verify the birth date and hire date.</div><button id="firstButton">Save and Continue</button><button id="lastButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div></div>
-<b role="heading" aria-level="4">This is a role=heading aria-level=4.</b>
-<h2>aria-labelledby</h2>
+<div role="alertdialog" aria-labelledby="alertHeading" aria-describedby="alertText" tabindex="0"><div id="firstElement" tabindex="0"></div><h1 id="alertHeading">Error</h1><div id="alertText">Employee's Birth Date is after their hire date. Please verify the birth date and hire date.</div><button id="firstButton">Save and Continue</button><button id="lastButton">Return to page and correct error</button><div id="lastElement" tabindex="0"></div></div><br>
+<b role="heading" aria-level="4">This is a role=heading aria-level=4.</b><br>
+<span id="input-info6" aria-live="assertive" aria-atomic="true" aria-relevant="additions">Characters remaining: <span id="chars6">280</span></span>
 <p><img src="http://pauljadam.com/demos/360bridge.jpg" aria-labelledby="penny-label" width="320" height="213"></p>
 <p id="penny-label">Pennybacker Bridge via aria-labelledby</p>
-<h2>aria-label</h2>
 <p><img src="http://pauljadam.com/demos/360bridge.jpg" aria-label="Pennybacker Bridge via aria-label" width="320" height="213"></p>
 <p>
   <input aria-label="aria-label attribute" aria-invalid="true">

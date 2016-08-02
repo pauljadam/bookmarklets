@@ -2,7 +2,7 @@ javascript: (function() {
     function callback() {
         function l() {
         $("span").remove(".openSpan, .closeSpan, .inputSpan, .axSpan");
-		var arias = $('[aria-expanded], [aria-controls], [aria-selected], [aria-required], [aria-invalid], [aria-labelledby], [aria-describedby], [aria-label], [role], [aria-hidden], [aria-level], [aria-haspopup], [aria-pressed], [aria-checked], [aria-live], [aria-atomic]').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
+		var arias = $('[aria-expanded], [aria-controls], [aria-selected], [aria-required], [aria-invalid], [aria-labelledby], [aria-describedby], [aria-label], [role], [aria-hidden], [aria-level], [aria-relevant], [aria-haspopup], [aria-pressed], [aria-checked], [aria-live], [aria-atomic]').not(':input[type=hidden], :input[type=button], :input[type=submit], :input[type=reset]');
 		$(arias).each(function() {
 			$(this).attr('style','outline:green 2px solid;padding:2px;');
 			if($(this).attr('aria-label')) {
@@ -38,8 +38,11 @@ javascript: (function() {
 			if($(this).attr('aria-level')) {
             	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-level=\""+$(this).attr('aria-level')+"\"</span>");
 			}
+			if($(this).attr('aria-relevant')) {
+            	$(this).before("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-relevant=\""+$(this).attr('aria-relevant')+"\"</span>");
+			}
 			if($(this).attr('aria-describedby')) {
-            	$(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-describedby=\""+$(this).attr('aria-describedby')+"\"</span>");
+            	$(this).before("<span class=\"axSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">aria-describedby=\""+$(this).attr('aria-describedby')+"\"</span>");
 				var describedbyValue = $(this).attr('aria-describedby');
 				var describedbyArray = describedbyValue.split(' ');
 				for (i = 0; i < describedbyArray.length; i++) {
