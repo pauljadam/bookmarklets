@@ -1,0 +1,118 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Onclick Attributes Bookmarklet for Accessibility Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
+<h1>Onclick Attributes Bookmarklet for Accessibility Testing</h1>
+<h2>Installation</h2>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/onclick.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/onclick.js';}})();">Onclick Bookmarklet</a> (drag link to bookmarks bar)</p>
+<h2>Test Content</h2>
+<span onclick="alert('hello')" style="color:#0000ff; text-decoration:underline" tabindex="0">this link works with mouse only</span>
+<div role="button" id="some-button-id"> some-button-id onclick (no tabindex)</div>
+<div role="button" class="fake-button"> onclick (no tabindex)</div>
+<div role="button" class="fake-button" tabindex="0"> onclick</div>
+<div role="button" class="fake-button fake-button-enter" tabindex="0"> onclick onkeyup Enter</div>
+<div role="button" class="fake-button fake-button-enter fake-button-spacebar" tabindex="0"> onclick onkeyup Enter + Spacebar</div>
+<div role="button" class="fake-button-keydown" tabindex="0">   onkeydown Enter + Spacebar</div>
+<div id="status" role="alert">
+</div>
+<h2>Bookmarklet Demo</h2>
+<script type="application/javascript">
+function loadJS(file) {
+    // DOM: Create the script element
+    var jsElm = document.createElement("script");
+    // set the type attribute
+    jsElm.type = "application/javascript";
+    // make the script element load file
+    jsElm.src = file;
+    // finally insert the element to the body element in order to load the script
+    document.body.appendChild(jsElm);
+}
+  </script>
+
+<button onclick="loadJS('onclick.js');">Show Onclick</button>
+<h4><a href="iosinstall.html">Not so easy installation method</a></h4>
+<label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/onclick.js';}})();</textarea>
+<script>
+
+
+$(document).ready(function(e) {
+	$('.fake-button-enter').on('keyup', function(e) {
+			$("#status").css("color", "black");
+		if(e.keyCode == '13'){
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("Enter keyCode 13 onkeyup Event Fired");
+		}
+	});
+	$('.fake-button-spacebar').on('keyup', function(e) {
+		if(e.keyCode == '32'){
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("Spacebar keyCode 32 onkeyup Event Fired");
+		}
+	});
+	$('.fake-button-keydown').on('keydown', function(e) {
+		if(e.keyCode == '32'){
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("Spacebar keyCode 32 onkeydown Event Fired");
+		}
+		if(e.keyCode == '13'){
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("Enter keyCode 13 onkeydown Event Fired");
+		}
+	});
+	$(".fake-button").click(function(e) {
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("onclick Event Fired");
+    });
+	$("button").click(function(e) {
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("onclick Event Fired");
+    });
+	$("a").click(function(e) {
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("onclick Event Fired");
+    });
+	$("a.prevent-default").click(function(e) {
+			$("#status").css("color", "red");
+			$("#status").text("");
+			$("#status").text("onclick Event Fired");
+			e.preventDefault();
+    });
+	
+	
+	var $btn = $('.fake-button-spacebar');
+
+
+function output(){ 
+    var e = $._data($btn.get(0),"events"),
+        str = "All Events"
+    $.each(e,function(i,v){
+        str+="\n" + i + ":" + v.toString();
+        $.each(v,function(ii,vv){
+            str+="\n\t" + ii + ":" + vv.handler.toString();
+        })
+    })
+    console.log(str);
+};
+output();
+
+$("*").each(function(){console.log($._data(this).events);});
+
+
+});
+</script>
+</body>
+</html>

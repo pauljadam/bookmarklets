@@ -17,7 +17,7 @@ javascript: (function() {
 				alert('No Landmarks Found!');
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
-				$('#success').html('Success! Landmarks Found!');
+				$('#success').html('Success! Landmarks Found on Page: ' + document.title);
 				setTimeout(function(){ $('#success').remove(); s.remove(); }, 3000);
 			}
         }

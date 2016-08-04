@@ -100,8 +100,8 @@ javascript: (function() {
 						}
 				}
 		});
-			if (!$(inputs).length) {
-				alert('No Form Inputs Found!');
+			if (!$(arias).length) {
+				alert("No WAI-ARIA Elements Found on Page: " + document.title);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Form Inputs Found!');

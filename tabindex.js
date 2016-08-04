@@ -9,7 +9,7 @@ javascript: (function() {
 				}
 	    });
 			if (!$('[tabindex]').length) {
-				alert('No <HTML> Elements with tabindex Found!');
+				alert('No tabindex attributes Found on Page: ' + document.title);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! tabindex Found!');

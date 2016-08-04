@@ -104,7 +104,7 @@ javascript: (function() {
                 $(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/fieldset&gt;</span>");
         });
 			if (!$(inputs).length) {
-				alert('No Form Inputs Found!');
+				alert("No Form Inputs Found on Page: " + document.title);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Form Inputs Found!');

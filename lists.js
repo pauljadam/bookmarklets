@@ -22,7 +22,7 @@ javascript: (function() {
 		$("dt").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;;speak:literal-punctuation;\">&lt;dt&gt;</strong>");
         $("dt").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/dt&gt;</strong>");
 			if (!$("ul, ol, li, dd, dt, dl").length) {
-				alert('No Lists Found!');
+				alert('No Lists Found on Page: ' + document.title);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Lists Found!');
