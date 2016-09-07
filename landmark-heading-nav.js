@@ -41,8 +41,8 @@ javascript: (function() {
         	case 98: console.log('b key pressed'); if ($('header').length) {$('header:first').focus();} if ($('[role=banner]').length) {$('[role=banner]:first').focus();} break;
         	// user presses the "n"
         	case 110: console.log('n key pressed'); if ($('nav').length) {$('nav:first').focus();} if ($('[role=navigation]').length) {$('[role=navigation]:first').focus();} break;
-        	// user presses the "c"
-        	case 99: console.log('c key pressed'); if ($('footer').length) {$('footer:first').focus();} if ($('[role=contentinfo]').length) {$('[role=contentinfo]:first').focus();} break;
+        	// user presses the "f"
+        	case 102: console.log('f key pressed'); if ($('footer').length) {$('footer:first').focus();} if ($('[role=contentinfo]').length) {$('[role=contentinfo]:first').focus();} break;
         	// user presses the "s"
         	case 115: console.log('s key pressed'); if ($('search').length) {$('search:first').focus();} if ($('[role=search]').length) {$('[role=search]:first').focus();} break;
         	// user presses the "1"
