@@ -59,7 +59,7 @@ javascript: (function() {
         	case 54: $('h6').focus(); break;
     		}
 		});
-			if (!$(landmarks).length) && (!$(':header').length) {
+			if (!$(landmarks).length) && (!$(':header').length) && (!$(sections).length){
 				alert('No Landmarks or Headings Found!');
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
