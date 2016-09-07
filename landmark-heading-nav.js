@@ -32,6 +32,33 @@ javascript: (function() {
 					$(this).removeAttr('style');
 	   			 });	
 	    });	
+		$(document).keypress(function(e)	{
+   			 switch(e.which)
+    		{
+        	// user presses the "m"
+        	case 109: console.log('m key pressed'); if ($('main').length) {$('main:first').focus();} if ($('[role=main]').length) {$('[role=main]:first').focus();} break;
+        	// user presses the "b"
+        	case 98: console.log('b key pressed'); if ($('header').length) {$('header:first').focus();} if ($('[role=banner]').length) {$('[role=banner]:first').focus();} break;
+        	// user presses the "n"
+        	case 110: console.log('n key pressed'); if ($('nav').length) {$('nav:first').focus();} if ($('[role=navigation]').length) {$('[role=navigation]:first').focus();} break;
+        	// user presses the "c"
+        	case 99: console.log('c key pressed'); if ($('footer').length) {$('footer:first').focus();} if ($('[role=contentinfo]').length) {$('[role=contentinfo]:first').focus();} break;
+        	// user presses the "s"
+        	case 115: console.log('s key pressed'); if ($('search').length) {$('search:first').focus();} if ($('[role=search]').length) {$('[role=search]:first').focus();} break;
+        	// user presses the "1"
+        	case 49: $('h1').focus(); break;
+        	// user presses the "2"
+        	case 50: $('h2').focus(); break;
+        	// user presses the "3"
+        	case 51: $('h3').focus(); break;
+        	// user presses the "4"
+        	case 52: $('h4').focus(); break;
+        	// user presses the "5"
+        	case 53: $('h5').focus(); break;
+        	// user presses the "6"
+        	case 54: $('h6').focus(); break;
+    		}
+		});
 			if (!$(landmarks).length) {
 				alert('No Landmarks or Headings Found!');
 			} else {
