@@ -2,13 +2,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Meta Viewport Content Bookmarklet for Accessibility Testing</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=YES"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 </head>
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
 <h1>Meta Viewport Content Bookmarklet for Accessibility Testing</h1>
 <p>Meta Viewport Content Bookmarklet for Accessibility Testing displays a JavaScript alert() dialog with the &lt;meta name=viewport&gt; content attribute so you can tell if pinch-to-zoom has been disabled. If user-scalable=0 or user-scalable=no then mobile users cannot increase the size of the web page with the standard pinch-to-zoom gesture.</p>
+<h2>iOS 10 Update</h2>
+<p>To improve accessibility on websites in Safari, users can now pinch-to-zoom even when a website sets user-scalable=no in the viewport.</p>
+<h2>Android</h2>
+<p>Chrome behaves like Safari iOS 10 and ignores the user-scalable=0 setting so users can pinch-to-zoom by default. On Firefox pinch-to-zoom will be disabled unless the user turns on Always enable zoom under Firefox's Accessibility Settings. In Chrome Android the Force enable zoom Accessibility setting was checked by default on my Nexus phone. </p>
+<p>It appears that this Accessibility Test may no longer be relevant in a few years once iOS 10 has full adoption. </p>
 <h2>Installation</h2>
 <p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';}})();">Meta Viewport Content Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Bookmarklet Demo</h2>

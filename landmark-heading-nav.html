@@ -4,6 +4,29 @@
 <title>Landmarks Headings Keyboard Navigation Bookmarklet for Accessibility Testing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style>
+main, aside, footer {margin-top:-1em;}
+nav {background-color:Pink; margin-top:2em;}
+header {background-color:Beige; }
+main {background-color:LightBlue; }
+aside {background-color:LightYellow;}
+footer {background-color:PeachPuff;}
+*:focus { outline: 3px solid #27B; }
+footer section { float: left; width: 30%; padding-left:1em;  font-size:.8em;}
+footer p { clear: both; text-align: center }
+#page-wrap { width: 800px; margin: 0 auto;}
+header li, aside li { float: left; list-style: none; padding: 0 2em; }
+header p, aside p {clear:both;}
+aside p {padding-top:1em}
+footer span {display:block;}
+footer ul {list-style:none; margin-left:-2em;}
+#quick-links { float:right; margin-top:-1em;}
+#quick-links li { float:none;}
+header form {float:right;}
+nav p {margin-bottom:-1em;}
+form {margin-top:-1em;background-color:Silver; }
+
+</style>
 </head>
 <body>
 <p><a href="index.html"><span aria-hidden="true">&lt;</span> Back to Bookmarklets for Accessibility Testing</a></p>
@@ -20,14 +43,12 @@
 <h2>Installation</h2>
 <p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmark-heading-nav.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmark-heading-nav.js';}})();">Landmarks Headings Keyboard Navigation Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
-<main role="main">
   <div id="header" role="banner">A banner image and introductory title</div>
   <div id="sitelookup" role="search">....</div>
   <div id="nav" role="navigation">...a list of links here ... </div>
   <div id="content" role="main"> ... Ottawa is the capital of Canada ...</div>
   <div id="rightsideadvert" role="complementary">....an advertisement here...</div>
   <div id="footer" role="contentinfo">(c)The Freedom Company, 123 Freedom Way, Helpville, USA</div>
-</main>
 <div role="button">not button (nutton)</div>
 <div role="application">I have no idea how to ARIA</div>
 <div id="page-wrap">
@@ -96,6 +117,7 @@
     <p>© 2018 Company Name, Inc. </p>
   </footer>
 </div>
+
 <h2>Bookmarklet Demo</h2>
 <script type="application/javascript">
 function loadJS(file) {
