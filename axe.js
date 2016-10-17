@@ -6,4 +6,4 @@ setTimeout(function(){
 axe.a11yCheck(document, function(results) {
   console.log(results);
 });
-}, 100);
+}, 1000);
