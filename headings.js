@@ -31,8 +31,9 @@ javascript: (function() {
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Headings Found!');
-				setTimeout(function(){ $('#success').remove(); s.remove(); }, 3000);
+				setTimeout(function(){ $('#success').remove();}, 3000);
 			}
+      $("script[src$='headings.js']").remove();s.remove();
         }
         l()
     }

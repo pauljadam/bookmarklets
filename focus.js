@@ -3,6 +3,7 @@ javascript: (function() {
         function l() {
 			$( "<style>a:focus, *:focus { outline: 4px solid orange !important; outline-offset:1px !important; }</style>" ).appendTo( "head" );
         }
+        $("script[src$='focus.js']").remove();s.remove();
         l()
     }
     var s = document.createElement("script");

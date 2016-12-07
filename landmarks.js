@@ -8,7 +8,7 @@ javascript: (function() {
 		$(landmarks).each(function() {
 				$(this).attr('style','outline:green 2px solid;padding:2px;');
    			 	$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">role=\""+$(this).attr('role')+"\"</span>");
-	    });	
+	    });
 		$(sections).each(function() {
 				$(this).attr('style','outline:green 2px solid;padding:2px;');
    			 	$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">&lt;"+$(this).prop('tagName').toLowerCase()+"&gt;</span>");
@@ -18,8 +18,10 @@ javascript: (function() {
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
 				$('#success').html('Success! Landmarks Found on Page: ' + document.title);
-				setTimeout(function(){ $('#success').remove(); s.remove(); }, 3000);
+				setTimeout(function(){ $('#success').remove(); }, 3000);
 			}
+      $("script[src$='landmarks.js']").remove();s.remove();
+
         }
         l()
     }

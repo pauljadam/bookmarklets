@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
@@ -8,27 +9,102 @@
 <body>
 <h1>Bookmarklets for Accessibility Testing</h1>
 <p>Bookmarklets for Accessibility Testing use JavaScript to highlight roles, states, and properties of accessibility elements on the page. They are accessible to screen reader users and work on any browser including mobile phones. </p>
-<p>Drag and drop the (JavaScript Bookmarklet) link enclosed in (parentheses) into your bookmarks bar to use in any browser. The first link in each list item is to the bookmarklet demonstration page.</p>
-<p>Bookmarklets now support accessibility testing of same-domain &lt;iframe&gt; elements but not cross-domain iframes. </p>
-<ol>
-  <li><a href="http://pauljadam.com/bookmarklets/forms.html">Forms</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';}})();">Forms</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/headings.html">Headings</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();">Headings</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/images.html">Images</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';}})();">Images</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/aria.html">ARIA</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';}})();">ARIA</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/tables.html">Tables</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';}})();">Tables</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/lists.html">Lists</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();">Lists</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/landmarks.html">Landmarks</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';}})();">Landmarks</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/meta-viewport-content.html">Meta Viewport Content</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';}})();">Meta Zoom</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/page-title-lang.html">Page Title + Language</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';}})();">Page &lt;title&gt;+lang</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/tabindex.html">Tabindex</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';}})();">Tabindex</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/title.html">Title Attributes</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';}})();">Title attribute</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/iframes.html">Iframes</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();">&lt;iframe&gt;s</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/focus.html">Force Focus</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/focus.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/focus.js';}})();">Force Focus</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/reset.html">Reset Page</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';}})();">Reset Page</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/landmark-heading-nav.html">Landmark Heading Keyboard Navigation</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmark-heading-nav.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmark-heading-nav.js';}})();">landmark-heading-nav</a>)</li>
-  <li>(<a href="javascript:void%20function(){(function(){function%20i(i){document.body.style.filter=i,document.body.style.webkitFilter=i}window.isGrayscale%3F(i(%22none%22),window.isGrayscale=!1):(i(%22grayscale(1)%22),window.isGrayscale=!0)})()}();">Grayscale</a>)</li>
-  <li><a href="http://pauljadam.com/bookmarklets/axe.html">console.log(aXe.results)</a> (<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';}})();">aXe.results</a>)</li>
-</ol>
+<p>Drag and drop the Install Link  into your bookmarks bar to use in any browser. Most bookmarklets have an inaccessible Demo Page where you can test how the bookmarklet works live.</p>
+<p>On Android devices bookmarklets must be activated via the browser search bar typing in the name of the bookmark otherwise it will not work just by tapping the bookmark normally like on iOS. </p>
+<p>Bookmarklets now support accessibility testing of same-domain &lt;iframe&gt; elements but not cross-domain iframes.</p>
+<p>Bookmarklets are also available as a standalone <a href="http://pauljadam.com/extension.html">a11yTools Extension for Safari macOS</a>.</p>
+<table>
+  <caption>
+    Bookmarklet Demo Pages and Installation Links
+  </caption>
+  <tbody>
+    <tr>
+      <th scope="col">Bookmarklet</th>
+      <th scope="col">Demo Page</th>
+      <th scope="col">Install Link</th>
+    </tr>
+    <tr>
+      <th scope="row">ARIA</th>
+      <td><a href="http://pauljadam.com/bookmarklets/aria.html">ARIA</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/aria.js';}})();">ARIA</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Images</th>
+      <td><a href="http://pauljadam.com/bookmarklets/images.html">Images</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/images.js';}})();">Images</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Forms</th>
+      <td><a href="http://pauljadam.com/bookmarklets/forms.html">Forms</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/forms.js';}})();">Forms</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Headings</th>
+      <td><a href="http://pauljadam.com/bookmarklets/headings.html">Headings</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();">Headings</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Tables</th>
+      <td><a href="http://pauljadam.com/bookmarklets/tables.html">Tables</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tables.js';}})();">Tables</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Landmarks</th>
+      <td><a href="http://pauljadam.com/bookmarklets/landmarks.html">Landmarks</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js';}})();">Landmarks</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Page Title</th>
+      <td>&nbsp;</td>
+      <td><a href="javascript:(function(){prompt('Press Command + C to Copy Page Title', document.title);})();">Page Title</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Lang</th>
+      <td><a href="http://www.freedomscientific.com/training/Surfs-Up/Languages.htm">Lang</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lang.js';}})();">Lang</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Tabindex</th>
+      <td><a href="http://pauljadam.com/bookmarklets/tabindex.html">Tabindex</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js';}})();">Tabindex</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Title Attributes</th>
+      <td><a href="http://pauljadam.com/bookmarklets/title.html">Title Attributes</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/title.js';}})();">Title Attr</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Iframes</th>
+      <td><a href="http://pauljadam.com/bookmarklets/iframes.html">Iframes</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();">Iframes</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Lists</th>
+      <td><a href="http://pauljadam.com/bookmarklets/lists.html">Lists</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/lists.js';}})();">Lists</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Force Show Focus</th>
+      <td><a href="http://pauljadam.com/bookmarklets/focus.html">Force Show Focus</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/focus.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/focus.js';}})();">Force Focus</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Reset Page</th>
+      <td><a href="http://pauljadam.com/bookmarklets/reset.html">Reset Page</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/reset.js';}})();">Reset Page</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Grayscale</th>
+      <td>&nbsp;</td>
+      <td><a href="javascript:void%20function(){(function(){function%20i(i){document.body.style.filter=i,document.body.style.webkitFilter=i}window.isGrayscale%3F(i(%22none%22),window.isGrayscale=!1):(i(%22grayscale(1)%22),window.isGrayscale=!0)})()}();">Grayscale</a></td>
+    </tr>
+    <tr>
+      <th scope="row">aXe console.log(results)</th>
+      <td><a href="http://pauljadam.com/bookmarklets/axe.html">aXe console.log(results)</a></td>
+      <td><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';}})();">aXe Console</a></td>
+    </tr>
+  </tbody>
+</table>
 <p><a href="http://pauljadam.com/bookmarklets/">http://pauljadam.com/bookmarklets/</a></p>
 <p>GitHub Repo: <a href="https://github.com/pauljadam/bookmarklets">https://github.com/pauljadam/bookmarklets</a></p>
 <p>TODO:    &lt;select onchange&gt;?, &amp; Visual Icons.  Disable CSS? &lt;audio&gt;&lt;video&gt;?, onclick events?, Potential Headings? </p>
