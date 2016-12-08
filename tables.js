@@ -5,40 +5,55 @@ javascript: (function() {
           $("table, [role=grid]").attr('style','outline:2px solid olive;');
           $("caption").each(function() {
   				$(this).attr('style','outline:green 2px solid;padding:2px;');
-                 	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">🎓&lt;caption&gt;</span>");
+                 	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;caption&gt;🎓</span>");
                   $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/caption&gt;</span>");
           });
           $("th").each(function() {
   				$(this).attr('style','outline:green 2px solid;padding:2px;');
   				if ($(this).attr('scope')) {
   					if ($(this).attr('id')) {
-  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th🍨scope=\""+$(this).attr('scope')+"\" id=\""+$(this).attr('id')+"\"&gt;</span>");
+  						if ($(this).attr('scope') == 'row') {
+  							$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"row\"🚣 id=\""+$(this).attr('id')+"\"&gt;</span>");
+  						}
+  						if ($(this).attr('scope') == 'col') {
+  							$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"col\"👇 id=\""+$(this).attr('id')+"\"&gt;</span>");
+  						}
   					} else if ($(this).attr('role')) {
-  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th🍨scope=\""+$(this).attr('scope')+"\" ♿role=\""+$(this).attr('role')+"\"&gt;</span>");
-  						} else {
-  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th🍨scope=\""+$(this).attr('scope')+"\"&gt;</span>");
+  						if ($(this).attr('scope') == 'row') {
+  							$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"row\"🚣 ♿role=\""+$(this).attr('role')+"\"&gt;</span>");
+  						}
+  						if ($(this).attr('scope') == 'col') {
+  							$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"col\"👇 ♿role=\""+$(this).attr('role')+"\"&gt;</span>");
+  						}
+  					} else {
+  							if ($(this).attr('scope') == 'row') {
+  								$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"row\"🚣&gt;</span>");
+  							}
+  							if ($(this).attr('scope') == 'col') {
+  								$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿scope=\"col\"👇&gt;</span>");
+  							}
   					}
   				} else if ($(this).attr('headers')) {
   					if ($(this).attr('id')) {
-  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th🎩headers=\""+$(this).attr('headers')+"\" id=\""+$(this).attr('id')+"\"&gt;👍</span>");
+  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿headers=\""+$(this).attr('headers')+"\" id=\""+$(this).attr('id')+"\"&gt;</span>");
   						} else {
-  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th🎩headers=\""+$(this).attr('headers')+"\"&gt;👍</span>");
+  						$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿headers=\""+$(this).attr('headers')+"\"&gt;</span>");
   					}
   				} else if ($(this).attr('id')) {
-  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th id=\""+$(this).attr('id')+"\"&gt;👍</span>");
+  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th id=\""+$(this).attr('id')+"\"&gt;♿</span>");
   				} else if ($(this).attr('role')) {
   					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th♿role=\""+$(this).attr('role')+"\"&gt;</span>");
   				} else {
-              		$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th&gt;👍</span>");
+              		$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;th&gt;♿</span>");
   				}
           });
           $("td").each(function() {
   				$(this).attr('style','outline:orange 2px dashed;padding:2px;');
   				if ($(this).attr('headers')) {
   					if ($(this).attr('role')) {
-  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;td🎩headers=\""+$(this).attr('headers')+"\"♿role=\""+$(this).attr('role')+"\"&gt;</span>");
+  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;td♿headers=\""+$(this).attr('headers')+"\"♿role=\""+$(this).attr('role')+"\"&gt;</span>");
   					}	else {
-  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;td🎩headers=\""+$(this).attr('headers')+"\"&gt;</span>");
+  					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;td♿headers=\""+$(this).attr('headers')+"\"&gt;</span>");
   					}
   				} else if ($(this).attr('role')) {
   					$(this).prepend("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;speak:literal-punctuation;\">&lt;td♿role=\""+$(this).attr('role')+"\"&gt;</span>");
