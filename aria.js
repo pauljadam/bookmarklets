@@ -50,6 +50,27 @@ javascript: (function() {
 			if($(this).attr('aria-busy')) {
    	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-busy=\""+$(this).attr('aria-busy')+"\"</span>");
 			}
+			if($(this).attr('aria-autocomplete')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-autocomplete=\""+$(this).attr('aria-autocomplete')+"\"</span>");
+			}
+			if($(this).attr('aria-colcount')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-colcount=\""+$(this).attr('aria-colcount')+"\"</span>");
+			}
+			if($(this).attr('aria-colindex')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-colindex=\""+$(this).attr('aria-colindex')+"\"</span>");
+			}
+			if($(this).attr('aria-colspan')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-colspan=\""+$(this).attr('aria-colspan')+"\"</span>");
+			}
+			if($(this).attr('aria-rowcount')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-rowcount=\""+$(this).attr('aria-rowcount')+"\"</span>");
+			}
+			if($(this).attr('aria-rowindex')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-rowindex=\""+$(this).attr('aria-rowindex')+"\"</span>");
+			}
+			if($(this).attr('aria-rowspan')) {
+   	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-rowspan=\""+$(this).attr('aria-rowspan')+"\"</span>");
+			}
 			if($(this).attr('aria-details')) {
    	 		$(this).before("<span class=\"axSpan\" style=\"outline:green 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:relative;line-height:100%;z-index:2147483647;\">aria-details=\""+$(this).attr('aria-details')+"\"</span>");
 			}
