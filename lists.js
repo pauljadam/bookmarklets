@@ -22,10 +22,12 @@ javascript: (function() {
 		$("dt").prepend("<strong class=\"openSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;;speak:literal-punctuation;\">&lt;dt&gt;</strong>");
         $("dt").append("<strong class=\"closeSpan\" style=\"color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/dt&gt;</strong>");
 			if (!$("ul, ol, li, dd, dt, dl").length) {
-				alert('No Lists Found on Page: ' + document.title);
+				$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="failure" role="status"></strong>');
+				$('#failure').html('No Lists Found on Page: ' + document.title);
+				setTimeout(function(){ $('#failure').remove(); }, 6000);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
-				$('#success').html('Success! Lists Found!');
+				$('#success').html('Success! Lists Found on Page: ' + document.title);
 				setTimeout(function(){ $('#success').remove(); }, 3000);
 			}
       $("script[src$='lists.js']").remove();s.remove();

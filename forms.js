@@ -105,11 +105,13 @@ javascript: (function() {
                   $(this).after("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/fieldset&gt;</span>");
           });
   			if (!$(inputs).length) {
-  				alert("No Form Inputs Found on Page: " + document.title);
-  			} else {
-  				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
-  				$('#success').html('Success! Form Inputs Found!');
-  				setTimeout(function(){ $('#success').remove(); }, 3000);
+				$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="failure" role="status"></strong>');
+				$('#failure').html('No Forms Found on Page: ' + document.title);
+				setTimeout(function(){ $('#failure').remove(); }, 6000);
+			} else {
+				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
+				$('#success').html('Success! Forms Found on Page: ' + document.title);
+				setTimeout(function(){ $('#success').remove(); }, 3000);
   			}
         $("script[src$='forms.js']").remove();s.remove();
         }
