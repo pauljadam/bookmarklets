@@ -2,11 +2,17 @@ javascript: (function() {
     function callback() {
         function l() {
 if(document.getElementsByTagName('html')[0].getAttribute('xml:lang') && document.documentElement.lang) {
-	alert('lang=\"' + document.documentElement.lang + '\" AND? xml:lang=\"' + document.getElementsByTagName('html')[0].getAttribute('xml:lang') + '\" on page: ' + document.title);
+	$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="lang-success" role="status"></strong>');
+	$('#lang-success').html('lang=\"' + document.documentElement.lang + '\" AND? xml:lang=\"' + document.getElementsByTagName('html')[0].getAttribute('xml:lang') + '\" on page: ' + document.title);
+	setTimeout(function(){ $('#lang-success').remove(); }, 10000);
 } else if(document.documentElement.lang) {
-	alert('lang=\"' + document.documentElement.lang + '\" on page: ' + document.title);
+	$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="lang-success" role="status"></strong>');
+	$('#lang-success').html('lang=\"' + document.documentElement.lang + '\" on page: ' + document.title);
+	setTimeout(function(){ $('#lang-success').remove(); }, 10000);
 } else if(document.getElementsByTagName('html')[0].getAttribute('xml:lang')) {
-	alert('xml:lang=\"' + document.getElementsByTagName('html')[0].getAttribute('xml:lang') + '\" on page: ' + document.title);
+	$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="lang-success" role="status"></strong>');
+	$('#lang-success').html('xml:lang=\"' + document.getElementsByTagName('html')[0].getAttribute('xml:lang') + '\" on page: ' + document.title);
+	setTimeout(function(){ $('#lang-success').remove(); }, 10000);
 } else {
 		$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="failure" role="status"></strong>');
 		$('#failure').html('No Lang or xml:lang Attributes Found on Page: ' + document.title);
@@ -19,13 +25,13 @@ if(document.getElementsByTagName('html')[0].getAttribute('xml:lang') && document
         });
 					if (!$("[lang]:not(html)").length) {
 				$('body').prepend('<strong style="color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;margin:0 2px; padding:2px;" id="failure" role="status"></strong>');
-				$('#failure').html('No Lang Attributes Found on Page: ' + document.title);
+				$('#failure').html('No Lang Attributes Found on Parts of Page: ' + document.title);
 				setTimeout(function(){ $('#failure').remove(); }, 6000);
 			} else {
 				$('body').append('<div id="success" role="alert" style="position:absolute; width:0; height:0; clip: rect(0,0,0,0);"></div>');
-				$('#success').html('Success! Lang Attributes Found on Page: ' + document.title);
+				$('#success').html('Success! Lang Attributes Found on Parts of Page: ' + document.title);
 				setTimeout(function(){ $('#success').remove(); }, 3000);
-          			}
+			}
       $("script[src$='lang.js']").remove();s.remove();
 
         }
