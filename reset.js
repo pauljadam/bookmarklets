@@ -1,8 +1,7 @@
 javascript: (function() {
     function callback() {
         function l() {
-        $("span").remove(".axSpan, .openSpan, .closeSpan, .inputSpan, .altSpan");
-	    $("strong").remove(".openSpan, .closeSpan");
+        $("span, strong").remove(".axSpan, .langSpan, .openSpan, .closeSpan, .inputSpan, .altSpan");
 		$("*").each(function() {
 				$(this).css('outline','');
 	    	});
