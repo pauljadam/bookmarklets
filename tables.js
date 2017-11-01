@@ -4,6 +4,7 @@ javascript: (function() {
           $("span").remove(".openSpan, .closeSpan, .inputSpan");
           $("table, [role=grid]").attr('style','outline:2px solid olive;');
           $("caption").each(function() {
+   				$(this).removeAttr('class');
   				$(this).attr('style','outline:green 2px solid;padding:2px;');
                  	$(this).prepend("<span class=\"openSpan\" style=\"padding:1px;color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;z-index:2147483647;speak:literal-punctuation;\">&lt;caption&gt;🎓</span>");
                   $(this).append("<span class=\"closeSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\">&lt;/caption&gt;</span>");
