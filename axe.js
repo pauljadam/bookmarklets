@@ -1,6 +1,6 @@
 var script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/3.0.0-beta.1/axe.min.js';
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/3.1.2/axe.min.js';
 document.head.appendChild(script);
 setTimeout(function(){
   axe.run(document, {
