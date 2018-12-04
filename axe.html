@@ -11,7 +11,7 @@
 <p>Run aXe in any browser with a console with this simple bookmarklet which will output aXe a11yCheck results to the console. There is no other user interface. </p>
 <p><a href="https://github.com/dequelabs/axe-core/blob/master/doc/API.md">aXe Javascript Accessibility API</a></p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';}})();">aXe.results</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.staticaly.com/gh/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.staticaly.com/gh/pauljadam/bookmarklets/master/axe.js';}})();">aXe.results</a> (drag link to bookmarks bar)</p>
 <h2>Bookmarklet Demo</h2>
 <p><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></p>
 <p><a href="http://www.dequeuniversity.com"><img src="http://www.deque.com/wp13/wp-content/uploads/2015/08/DequeU-Best-Practices-150x150.png"></a></p>
@@ -44,7 +44,7 @@
 <button onclick="loadJS('axe.js');">Show aXe.results</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/axe.js';}})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.staticaly.com/gh/pauljadam/bookmarklets/master/axe.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.staticaly.com/gh/pauljadam/bookmarklets/master/axe.js';}})();</textarea>
 <script type="application/javascript">
 function loadJS(file) {
     // DOM: Create the script element
