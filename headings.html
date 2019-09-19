@@ -10,7 +10,7 @@
 <h1>Headings Bookmarklet for Accessibility Testing </h1>
 <p>Headings Bookmarklet for Accessibility Testing inserts a black on yellow opening and closing tag into the DOM around each H1-H6 and WAI-ARIA role=heading aria-level=1-6</p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';}})();">Headings Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <h1>This is a heading level 1.</h1>
 <p>This is another paragraph.</p>
@@ -61,6 +61,6 @@ function loadJS(file) {
 <button onclick="loadJS('http://pauljadam.com/bookmarklets/headings.js');">Show Headings</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/headings.js';}})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';}})();</textarea>
 </body>
 </html>

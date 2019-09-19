@@ -15,12 +15,12 @@
 <p>Chrome behaves like Safari iOS 10 and ignores the user-scalable=0 setting so users can pinch-to-zoom by default. On Firefox pinch-to-zoom will be disabled unless the user turns on Always enable zoom under Firefox's Accessibility Settings. In Chrome Android the Force enable zoom Accessibility setting was checked by default on my Nexus phone. </p>
 <p>It appears that this Accessibility Test may no longer be relevant in a few years once iOS 10 has full adoption. </p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';}})();">Meta Viewport Content Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/meta.js';}})();">Meta Viewport Content Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Bookmarklet Demo</h2>
 <button onclick="loadJS('meta.js');">Show Meta Viewport Content</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/meta.js';}})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/meta.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/meta.js';}})();</textarea>
 <script type="application/javascript">
 function loadJS(file) {
     // DOM: Create the script element

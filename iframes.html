@@ -10,7 +10,7 @@
 <h1>Iframes Bookmarklet for Accessibility Testing</h1>
 <p>Iframes Bookmarklet for Accessibility Testing visually highlights the location and accessibility properties of &lt;iframe&gt; elements. </p>
 <h2>Installation</h2>
-<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();">Iframes Bookmarklet</a> (drag link to bookmarks bar)</p>
+<p><a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/iframes.js';}})();">Iframes Bookmarklet</a> (drag link to bookmarks bar)</p>
 <h2>Test Content</h2>
 <iframe width="100%" height="300px" src="demo_iframe.htm" name="iframe_a"></iframe>
 <p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
@@ -55,6 +55,6 @@ function loadJS(file) {
 <button onclick="loadJS('iframes.js');">Show Iframes Info</button>
 <h4><a href="iosinstall.html">Not so easy installation method</a></h4>
 <label for="jscode">Copy/Paste JavaScript Bookmarklet URL Code</label><br>
-<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/pauljadam/bookmarklets/master/iframes.js';}})();</textarea>
+<textarea id="jscode" rows="4" cols="40">javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/iframes.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/iframes.js';}})();</textarea>
 </body>
 </html>
